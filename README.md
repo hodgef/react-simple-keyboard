@@ -5,7 +5,7 @@
 <a href="https://franciscohodge.com/projects/simple-keyboard/"><img src="src/demo/images/simple-keyboard.png" align="center"></a>
 > An easily customisable and responsive on-screen virtual keyboard for React.js projects.
 
-> Want the ES6 version? Get [react-simple-keyboard](https://www.npmjs.com/package/simple-keyboard) instead!
+> Want the vanilla js version? Get [simple-keyboard](https://www.npmjs.com/package/simple-keyboard) instead!
 
 <img src="src/demo/images/keyboard.PNG" align="center" width="100%">
 
