@@ -1,6 +1,6 @@
 {
   "name": "react-simple-keyboard",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "React.js Virtual Keyboard",
   "main": "build/index.js",
   "scripts": {
@@ -33,7 +33,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "simple-keyboard": "latest"
+    "simple-keyboard": "^2.1.1"
   },
   "devDependencies": {
     "autoprefixer": "7.1.6",
