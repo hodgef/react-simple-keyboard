@@ -128,9 +128,41 @@ debug={false}
 newLineOnEnter={false}
 ```
 
+### inputName
+
+> Allows you to use a single simple-keyboard instance for several inputs.
+
+```js
+inputName={"default"}
+```
+
+### onKeyPress
+
+> Executes the callback function on key press. Returns button layout name (i.e.: "{shift}").
+
+```js
+onKeyPress={(button) => console.log(button)}
+```
+
+### onChange
+
+> Executes the callback function on input change. Returns the current input's string.
+
+```js
+onChange={(input) => console.log(input)}
+```
+
+### onChangeAll
+
+> Executes the callback function on input change. Returns the input object with all defined inputs. This is useful if you're handling several inputs with simple-keyboard, as specified in the "*[Using several inputs](#using-several-inputs)*" guide.
+
+```js
+onChangeAll={(inputs) => console.log(inputs)}
+```
+
 ## Methods
 
-simple-keybord has a few methods you can use to further control it's behavior.
+simple-keyboard has a few methods you can use to further control it's behavior.
 To access these functions, you need a `ref` of the simple-keyboard component, like so:
 
 ```js
@@ -148,7 +180,12 @@ this.keyboard.methodName(params);
 > Clear the keyboard's input.
 
 ```js
+// For default input (i.e. if you have only one)
 this.keyboard.clearInput();
+
+// For specific input
+// Must have been previously set using the "inputName" prop.
+this.keyboard.clearInput("inputName");
 ```
 
 ### getInput
@@ -156,7 +193,12 @@ this.keyboard.clearInput();
 > Get the keyboard's input (You can also get it from the _onChange_ prop).
 
 ```js
+// For default input (i.e. if you have only one)
 let input = this.keyboard.getInput();
+
+// For specific input
+// Must have been previously set using the "inputName" prop.
+let input = this.keyboard.getInput("inputName");
 ```
 
 ### setInput
@@ -164,7 +206,12 @@ let input = this.keyboard.getInput();
 > Set the keyboard's input. Useful if you want the keybord to initialize with a default value, for example.
 
 ```js
+// For default input (i.e. if you have only one)
 this.keyboard.setInput("Hello World!");
+
+// For specific input
+// Must have been previously set using the "inputName" prop.
+this.keyboard.setInput("Hello World!", "inputName");
 ```
 
 It returns a promise, so if you want to run something after it's applied, call it as so:
@@ -176,6 +223,59 @@ inputSetPromise.then((result) => {
   console.log("Input set");
 });
 ```
+
+### setOptions
+
+> Set new option or modify existing ones after initialization. The changes are applied immediately.
+
+```js
+this.keyboard.setOptions({
+  theme: "my-custom-theme"
+});
+```
+
+
+## Use-cases
+
+### Using several inputs
+
+Set the *[inputName](#inputname)* option for each input you want to handle with simple-keyboard.
+
+For example:
+```js
+// Tell simple-keyboard which input is active
+setActiveInput = (event) => {
+  this.setState({
+    inputName: event.target.id
+  });
+}
+
+// When the inputs are changed
+// (retrieves all inputs as an object instead of just the current input's string)
+onChangeAll = (input) => {
+  this.setState({
+    input: input
+  }, () => {
+    console.log("Inputs changed", input);
+  });
+}
+
+render(){
+  return (
+    <div>
+      <input id="input1" onFocus={this.setActiveInput} value={this.state.input['input1'] || ""}/>
+      <input id="input2" onFocus={this.setActiveInput} value={this.state.input['input2'] || ""}/>
+
+      <Keyboard
+        ref={r => this.keyboard = r}
+        inputName={this.state.inputName}
+        onChangeAll={inputs => this.onChangeAll(inputs)}
+        layoutName={this.state.layoutName}
+      />
+    </div>
+  );
+```
+> [See full example](https://github.com/hodgef/react-simple-keyboard/blob/master/src/demo/MultipleInputsDemo.js).
 
 ## Demo
 
