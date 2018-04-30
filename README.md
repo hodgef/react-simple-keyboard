@@ -224,17 +224,6 @@ inputSetPromise.then((result) => {
 });
 ```
 
-### setOptions
-
-> Set new option or modify existing ones after initialization. The changes are applied immediately.
-
-```js
-this.keyboard.setOptions({
-  theme: "my-custom-theme"
-});
-```
-
-
 ## Use-cases
 
 ### Using several inputs
