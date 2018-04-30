@@ -20,7 +20,7 @@
 
 ````js
 import React, {Component} from 'react';
-import Keyboard from 'simple-keyboard';
+import Keyboard from 'react-simple-keyboard';
 import 'simple-keyboard/build/css/index.css';
 
 class App extends Component {
