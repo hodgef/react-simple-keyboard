@@ -20,19 +20,23 @@ class App extends Component {
     }
   }
 
-  clearInput = () => {
+  clearInput = (inputName) => {
+    inputName = inputName || "default";
+
     this.setState({
       input: ''
     });
+
+    this.keyboard.clearInput(inputName);
   }
 
-  getInput = () => {
-    return this.state.input;
+  getInput = (inputName) => {
+    return inputName ? this.keyboard.input[inputName] : this.state.input;
   }
 
-  setInput = input => {
+  setInput = (input, inputName) => {
     return new Promise(resolve => {
-      this.keyboard.setInput(input);
+      this.keyboard.setInput(input, inputName);
       this.setState({
         input: input
       }, () => {
@@ -73,6 +77,12 @@ class App extends Component {
        */
       if(typeof this.props.onChange === "function")
         this.props.onChange(this.state.input);
+
+      /**
+       * Calling user onChangeAll
+       */
+      if(typeof this.props.onChangeAll === "function")
+        this.props.onChangeAll(this.keyboard.input);
     });
   }
 
@@ -85,13 +95,17 @@ class App extends Component {
   }
 
   initKeyboard = (props) => {
+    let debug = this.props.debug;
+
     this.keyboard = new Keyboard({
       ...props,
       onKeyPress: button => this.onKeyPress(button),
       onChange: input => this.onChange(input)
     });
 
-    console.log(this.keyboard);
+    if(debug){
+      console.log(this.keyboard);
+    }
   }
 
   render() {
@@ -107,6 +121,7 @@ App.propTypes = {
   theme:  PropTypes.string,
   display: PropTypes.object,
   onChange: PropTypes.func,
+  onChangeAll: PropTypes.func,
   onKeyPress: PropTypes.func,
   debug: PropTypes.bool
 };
