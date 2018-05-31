@@ -9,8 +9,6 @@
 
 <img src="https://franciscohodge.com/project-pages/simple-keyboard/images/keyboard.png" align="center" width="100%">
 
-<b>[Live Demo](https://franciscohodge.com/simple-keyboard/demo)</b>
-
 
 ## Installation
 
@@ -47,6 +45,8 @@ class App extends Component {
 
 export default App;
 ````
+
+[![Edit m75m9v183p](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/m75m9v183p)
 
 > Need a more extensive example? [Click here](https://github.com/hodgef/simple-keyboard/blob/master/src/demo/App.js).
 
@@ -270,9 +270,11 @@ render(){
 
 <img src="https://franciscohodge.com/project-pages/simple-keyboard/images/demo.gif" align="center" width="600">
 
-### Live demo
+### Live demos
 
 [https://franciscohodge.com/simple-keyboard/demo](https://franciscohodge.com/simple-keyboard/demo)
+
+[![Edit m75m9v183p](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/m75m9v183p)
 
 ### To run demo on your own computer
 
