@@ -291,4 +291,4 @@ render(){
 ## Contributing
 
 PR's and issues are welcome. Feel free to submit any issues you have at:
-[https://github.com/hodgef/simple-keyboard/issues](https://github.com/hodgef/simple-keyboard/issues)
+[https://github.com/hodgef/react-simple-keyboard/issues](https://github.com/hodgef/react-simple-keyboard/issues)
