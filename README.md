@@ -3,7 +3,7 @@
 [![npm](https://img.shields.io/npm/v/react-simple-keyboard.svg)](https://www.npmjs.com/package/react-simple-keyboard)
 
 <a href="https://franciscohodge.com/projects/simple-keyboard/"><img src="https://franciscohodge.com/project-pages/simple-keyboard/images/react-simple-keyboard.png" align="center"></a>
-> An easily customisable and responsive on-screen virtual keyboard for React.js projects.
+> The easily customisable and responsive on-screen virtual keyboard for React.js projects.
 
 > Want the vanilla js version? Get [simple-keyboard](https://www.npmjs.com/package/simple-keyboard) instead!
 
@@ -283,7 +283,12 @@ render(){
 * `npm start`
 * Visit [http://localhost:3000/](http://localhost:3000/)
 
-## Note
 
-This is a work in progress. Feel free to submit any issues you have at:
-[https://github.com/hodgef/react-simple-keyboard/issues](https://github.com/hodgef/react-simple-keyboard/issues)
+### Other versions
+
+* Vanilla JS - [simple-keyboard](https://github.com/hodgef/simple-keyboard)
+
+## Contributing
+
+PR's and issues are welcome. Feel free to submit any issues you have at:
+[https://github.com/hodgef/simple-keyboard/issues](https://github.com/hodgef/simple-keyboard/issues)
