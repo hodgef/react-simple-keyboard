@@ -5,19 +5,15 @@ import 'simple-keyboard/build/css/index.css';
 
 class App extends Component {
   state = {
-    input: ''
+    input: '',
   }
 
-  componentWillReceiveProps = (nextProps) => {
-    if(
-      this.props !== nextProps
-    ){
-      this.setState({
-        layoutName: nextProps.layoutName,
-        layout: nextProps.layout,
-        themeClass: nextProps.theme
-      });
-    }
+  componentDidMount(){
+    this.initKeyboard(this.props);
+  }
+
+  componentWillReceiveProps = nextProps => {
+    this.keyboard.setOptions(nextProps);
   }
 
   clearInput = (inputName) => {
@@ -56,7 +52,7 @@ class App extends Component {
      */
     if(typeof this.props.onKeyPress === "function")
       this.props.onKeyPress(button);
-    
+
     if(debug){
       console.log("Key pressed:", button);
     }
@@ -71,7 +67,7 @@ class App extends Component {
       if(debug){
         console.log('Input changed:', this.state.input);
       }
-      
+
       /**
        * Calling user onChange
        */
@@ -84,14 +80,6 @@ class App extends Component {
       if(typeof this.props.onChangeAll === "function")
         this.props.onChangeAll(this.keyboard.input);
     });
-  }
-
-  componentWillReceiveProps = nextProps => {
-    this.keyboard.setOptions(nextProps);
-  }
-
-  componentDidMount(){
-    this.initKeyboard();
   }
 
   initKeyboard = (props) => {
