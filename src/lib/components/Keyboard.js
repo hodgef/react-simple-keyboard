@@ -5,19 +5,7 @@ import 'simple-keyboard/build/css/index.css';
 
 class App extends Component {
   state = {
-    input: ''
-  }
-
-  componentWillReceiveProps = (nextProps) => {
-    if(
-      this.props !== nextProps
-    ){
-      this.setState({
-        layoutName: nextProps.layoutName,
-        layout: nextProps.layout,
-        themeClass: nextProps.theme
-      });
-    }
+    input: '',
   }
 
   clearInput = (inputName) => {
@@ -56,7 +44,7 @@ class App extends Component {
      */
     if(typeof this.props.onKeyPress === "function")
       this.props.onKeyPress(button);
-    
+
     if(debug){
       console.log("Key pressed:", button);
     }
@@ -71,7 +59,7 @@ class App extends Component {
       if(debug){
         console.log('Input changed:', this.state.input);
       }
-      
+
       /**
        * Calling user onChange
        */
