@@ -79,7 +79,7 @@ class App extends Component {
   }
 
   componentDidMount(){
-    this.initKeyboard();
+    this.initKeyboard(this.props);
   }
 
   initKeyboard = (props) => {
