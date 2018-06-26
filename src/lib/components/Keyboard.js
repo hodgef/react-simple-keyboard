@@ -8,6 +8,14 @@ class App extends Component {
     input: '',
   }
 
+  componentDidMount(){
+    this.initKeyboard(this.props);
+  }
+
+  componentWillReceiveProps = nextProps => {
+    this.keyboard.setOptions(nextProps);
+  }
+
   clearInput = (inputName) => {
     inputName = inputName || "default";
 
@@ -72,14 +80,6 @@ class App extends Component {
       if(typeof this.props.onChangeAll === "function")
         this.props.onChangeAll(this.keyboard.input);
     });
-  }
-
-  componentWillReceiveProps = nextProps => {
-    this.keyboard.setOptions(nextProps);
-  }
-
-  componentDidMount(){
-    this.initKeyboard(this.props);
   }
 
   initKeyboard = (props) => {
