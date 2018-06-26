@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Keyboard from 'simple-keyboard';
 import 'simple-keyboard/build/css/index.css';
 
-class App extends Component {
+class KeyboardReact extends Component {
   state = {
     input: '',
   }
@@ -103,7 +103,7 @@ class App extends Component {
   }
 }
 
-App.propTypes = {
+KeyboardReact.propTypes = {
   layoutName: PropTypes.string,
   layout: PropTypes.object,
   theme:  PropTypes.string,
@@ -114,4 +114,4 @@ App.propTypes = {
   debug: PropTypes.bool
 };
 
-export default App;
+export default KeyboardReact;
