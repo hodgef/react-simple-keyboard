@@ -130,7 +130,7 @@ buttonTheme={[
 ]}
 ```
 
-[![Edit simple-keyboard customization demo - npm](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/vj8jvz2q4l?module=%2Fsrc%2Findex.js)
+[![Edit react-simple-keyboard customization demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/ol76rx073z)
 
 
 ### debug
