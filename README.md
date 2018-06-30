@@ -7,7 +7,7 @@
 
 > Want the vanilla js version? Get [simple-keyboard](https://www.npmjs.com/package/simple-keyboard) instead!
 
-<img src="https://franciscohodge.com/project-pages/simple-keyboard/images/keyboard.png" align="center" width="100%">
+<img src="https://franciscohodge.com/project-pages/simple-keyboard/images/k2.png" align="center" width="100%">
 
 
 ## Installation
@@ -111,6 +111,27 @@ display={{
 ```js
 theme={"hg-theme-default"}
 ```
+
+### buttonTheme
+
+> A prop to add your own css classes _to one or several buttons_. You can add multiple classes separated by a space.
+
+```js
+buttonTheme={[
+  {
+    class: "myCustomClass",
+    buttons: "Q W E R T Y q w e r t y"
+  },
+  {
+    class: "anotherCustomClass",
+    buttons: "Q q"
+  },
+  ...
+]}
+```
+
+[![Edit simple-keyboard customization demo - npm](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/vj8jvz2q4l?module=%2Fsrc%2Findex.js)
+
 
 ### debug
 
@@ -267,8 +288,6 @@ render(){
 > [See full example](https://github.com/hodgef/react-simple-keyboard/blob/master/src/demo/MultipleInputsDemo.js).
 
 ## Demo
-
-<img src="https://franciscohodge.com/project-pages/simple-keyboard/images/demo.gif" align="center" width="600">
 
 ### Live demos
 
