@@ -7,7 +7,7 @@
 
 .demoPage .screenContainer {
   background: rgba(0,0,0,0.8);
-  border: 20px solid;
+  border: 20px solid rgba(0,0,0,0.1);
   height: 300px;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
