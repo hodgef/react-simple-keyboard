@@ -7,7 +7,7 @@
 
 > Want the vanilla js version? Get [simple-keyboard](https://www.npmjs.com/package/simple-keyboard) instead!
 
-<img src="https://franciscohodge.com/project-pages/simple-keyboard/images/k2.png" align="center" width="100%">
+<a href="https://franciscohodge.com/simple-keyboard/demo" title="View Demo"><img src="https://franciscohodge.com/project-pages/simple-keyboard/images/k2.png" align="center" width="100%"></a>
 
 
 ## Installation
