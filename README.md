@@ -1,6 +1,7 @@
 # react-simple-keyboard
 
-[![npm](https://img.shields.io/npm/v/react-simple-keyboard.svg)](https://www.npmjs.com/package/react-simple-keyboard)
+[![npm version](https://badge.fury.io/js/react-simple-keyboard.svg)](https://www.npmjs.com/package/react-simple-keyboard)
+
 
 <a href="https://franciscohodge.com/projects/simple-keyboard/"><img src="https://franciscohodge.com/project-pages/simple-keyboard/images/react-simple-keyboard.png" align="center"></a>
 > The easily customisable and responsive on-screen virtual keyboard for React.js projects.
