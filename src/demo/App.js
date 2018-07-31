@@ -73,7 +73,7 @@ class App extends Component {
           theme={"hg-layout-default hg-theme-default"}
           debug={false}
           display={{
-            '{bksp}': 'delete',
+            '{bksp}': 'backspace',
             '{enter}': '< enter',
             '{shift}': 'shift',
             '{s}': 'shift',
