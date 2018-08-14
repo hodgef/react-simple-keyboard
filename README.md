@@ -1,14 +1,10 @@
-# react-simple-keyboard
-
 [![npm version](https://badge.fury.io/js/react-simple-keyboard.svg)](https://www.npmjs.com/package/react-simple-keyboard)
 
+<a href="https://franciscohodge.com/simple-keyboard/demo" title="View Demo"><img src="https://franciscohodge.com/project-pages/simple-keyboard/images/react-simple-keyboard-banner.png" align="center" width="100%"></a>
 
-<a href="https://franciscohodge.com/projects/simple-keyboard/"><img src="https://franciscohodge.com/project-pages/simple-keyboard/images/react-simple-keyboard.png" align="center"></a>
-> The easily customisable and responsive on-screen virtual keyboard for React.js projects.
+> The easily customisable and responsive on-screen virtual keyboard, now for React.js projects.
 
 > Want the vanilla js version? Get [simple-keyboard](https://www.npmjs.com/package/simple-keyboard) instead!
-
-<a href="https://franciscohodge.com/simple-keyboard/demo" title="View Demo"><img src="https://franciscohodge.com/project-pages/simple-keyboard/images/k2.png" align="center" width="100%"></a>
 
 
 ## Installation
