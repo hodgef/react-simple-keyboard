@@ -286,7 +286,7 @@ render(){
 ```
 > [See full example](https://github.com/hodgef/react-simple-keyboard/blob/master/src/demo/MultipleInputsDemo.js).
 
-# Having keys in a different language configuration
+### Having keys in a different language configuration
 
 There's a number of key layouts available. To apply them, check out [simple-keyboard-layouts](https://github.com/hodgef/simple-keyboard-layouts).
 
