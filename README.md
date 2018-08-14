@@ -75,6 +75,8 @@ layout={{
 }}
 ```
 
+> Looking for keyboard layouts in other languages? **Check out [simple-keyboard-layouts](https://github.com/hodgef/simple-keyboard-layouts) !**
+
 ### layoutName
 
 > Specifies which layout should be used.
@@ -283,6 +285,14 @@ render(){
   );
 ```
 > [See full example](https://github.com/hodgef/react-simple-keyboard/blob/master/src/demo/MultipleInputsDemo.js).
+
+# Having keys in a different language configuration
+
+There's a number of key layouts available. To apply them, check out [simple-keyboard-layouts](https://github.com/hodgef/simple-keyboard-layouts).
+
+<a href="https://github.com/hodgef/simple-keyboard-layouts" title="simple-keyboard-layouts repository"><img src="https://franciscohodge.com/project-pages/simple-keyboard/images/simple-keyboard-banner3layouts.png" align="center"></a>
+
+If you'd like to contribute your own layouts, please submit your pull request at the simple-keyboard-layouts repository.
 
 ## Demo
 
