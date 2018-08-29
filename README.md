@@ -1,6 +1,6 @@
 [![npm version](https://badge.fury.io/js/react-simple-keyboard.svg)](https://www.npmjs.com/package/react-simple-keyboard)
 
-<a href="https://franciscohodge.com/simple-keyboard/demo" title="View Demo"><img src="https://franciscohodge.com/project-pages/simple-keyboard/images/react-simple-keyboard-banner.png" align="center" width="100%"></a>
+<a href="https://franciscohodge.com/simple-keyboard/demo" title="View Demo" target="_blank"><img src="https://franciscohodge.com/project-pages/simple-keyboard/images/react-simple-keyboard-banner.png" align="center" width="100%"></a>
 
 > The easily customisable and responsive on-screen virtual keyboard, now for React.js projects.
 
