@@ -13,7 +13,7 @@
 `npm install react-simple-keyboard --save`
 
 ## Usage
-
+ 
 ````js
 import React, {Component} from 'react';
 import Keyboard from 'react-simple-keyboard';
