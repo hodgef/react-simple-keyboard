@@ -1,7 +1,7 @@
 [![npm version](https://badge.fury.io/js/react-simple-keyboard.svg)](https://www.npmjs.com/package/react-simple-keyboard)
 
 <a href="https://franciscohodge.com/simple-keyboard/demo" title="View Demo" target="_blank"><img src="https://franciscohodge.com/project-pages/simple-keyboard/images/reactsimplekeyboard-banner_B.png" align="center" width="100%"></a>
-<a href="https://franciscohodge.com/simple-keyboard/demo" title="View Demo" target="_blank"><img src="https://franciscohodge.com/project-pages/simple-keyboard/images/skeyboard.gif" align="center" width="100%"></a>
+<a href="https://franciscohodge.com/simple-keyboard/demo" title="View Demo" target="_blank"><img src="https://franciscohodge.com/project-pages/simple-keyboard/images/simple-keyboard-240-demo-2.gif" align="center" width="100%"></a>
 
 > The easily customisable and responsive on-screen virtual keyboard, now for React.js projects.
 
@@ -157,6 +157,39 @@ newLineOnEnter={false}
 inputName={"default"}
 ```
 
+### baseClass
+
+Sets a personalized unique id (base class) for your simple-keyboard instance.
+This is useful if you want to have many simple-keyboard instances and do not want to confuse them.
+
+If not set, a random baseClass will be used (e.g.: `simplekeyboard_id-qeu5wu` to differentiate your instance from others you may spawn).
+
+```js
+baseClass={"myBaseClass"}
+```
+
+### syncInstanceInputs
+
+> When set to true, this option synchronizes the internal input of every simple-keyboard instance.
+
+```js
+syncInstanceInputs={false}
+```
+
+### physicalKeyboardHighlight
+
+When set to true, this option adds the special class (`hg-selectedButton`) to the key that matches.
+For example, when you press the `a` key, that key in simple-keyboard will have the special class until the key is released.
+
+For functional keys such as `shift`, note that the key's `event.code` is used. In that instance, pressing the left key will result in the code `ShiftLeft`. Therefore, the key must be named `{shiftleft}`.
+[Click here](https://github.com/hodgef/simple-keyboard/blob/master/src/lib/services/Utilities.js#L58) for some of keys supported out of the box.
+
+If in doubt, you can also set the `debug` option to `true`.
+
+```js
+physicalKeyboardHighlight={true}
+```
+
 ### onKeyPress
 
 > Executes the callback function on key press. Returns button layout name (i.e.: "{shift}").
@@ -245,7 +278,30 @@ inputSetPromise.then((result) => {
 });
 ```
 
-## Use-cases
+### dispatch
+
+> Send a command to all simple-keyboard instances at once (if you have multiple instances).
+
+```js
+this.keyboard.dispatch(instance => {
+  instance.setOptions({
+    buttonTheme: [
+      {
+        class: "myClass",
+        buttons: `a b c`
+      }
+    ]
+  })
+});
+```
+
+## Q&A / Use-cases
+
+### Multiple simple-keyboard instances: Setting a baseClass
+Set the *[baseClass](#baseclass)* option to add a unique identifier to each of your simple-keyboard instances.
+If not set, a random baseClass will be used (e.g.: `simplekeyboard_id-qeu5wu` to differentiate your instance from others you may spawn).
+
+[![Edit react-simple-keyboard multiple instances demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/8z2jw9okm8)
 
 ### Using several inputs
 
@@ -292,6 +348,18 @@ render(){
 There's a number of key layouts available. To apply them, check out [simple-keyboard-layouts](https://github.com/hodgef/simple-keyboard-layouts).
 
 If you'd like to contribute your own layouts, please submit your pull request at the simple-keyboard-layouts repository.
+
+### How to syncronize multiple instances of simple-keyboard
+
+You can run multiple instances of simple-keyboard. To keep their internal inputs in sync, set the *[syncInstanceInputs](#syncinstanceinputs)* option to `true`. 
+If you want to send a command to all your simple-keyboard instances at once, you can use the *[dispatch](#dispatch)* method.
+
+### Why is the caps lock button working like shift button?
+
+For the sake of simplicity, caps lock and shift do the same action in the main demos.
+If you'd like to show a different layout when you press caps lock, check out the following demo:
+
+[![Edit react-simple-keyboard handling shift and caps lock demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/930vzzp77o)
 
 ## Demo
 
