@@ -105,9 +105,7 @@ class KeyboardReact extends Component {
 
   render() {
     let baseClass = this.props.baseClass || this.baseClassDefault;
-
-    console.log("x",baseClass);
-
+    
     return (
       <div className={`${baseClass}`}></div>
     );
