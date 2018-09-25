@@ -280,23 +280,10 @@ inputSetPromise.then((result) => {
 
 ### dispatch
 
-> Send a command to all simple-keyboard instances at once (if you have multiple instances).
-
-```js
-this.keyboard.dispatch(instance => {
-  instance.setOptions({
-    buttonTheme: [
-      {
-        class: "myClass",
-        buttons: `a b c`
-      }
-    ]
-  })
-});
-```
-
 This is a port of the [simple-keyboard feature](https://www.npmjs.com/package/simple-keyboard#dispatch) of the same name.
-If you'd like to use a more react-like approach to sending props to many instances, you can use shared props like so:
+It has been removed from this port in favor of a react-like approach.
+
+To send props to several instances at once, you can use shared props like so:
 
 ```js
 let sharedProps = {
