@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Keyboard from 'simple-keyboard';
+import Utilities from '../services/Utilities';
 import 'simple-keyboard/build/css/index.css';
 
 class KeyboardReact extends Component {
   state = {
-    input: '',
+    input: ''
+  }
+
+  constructor(props){
+    super(props);
+    this.baseClassDefault = Utilities.getRandomBaseClass();
   }
 
   componentDidMount(){
@@ -13,7 +19,7 @@ class KeyboardReact extends Component {
   }
 
   componentWillReceiveProps = nextProps => {
-    this.keyboard.setOptions(nextProps);
+    this.keyboard.setOptions(Utilities.parseProps(nextProps));
   }
 
   clearInput = (inputName) => {
@@ -84,11 +90,12 @@ class KeyboardReact extends Component {
 
   initKeyboard = (props) => {
     let debug = this.props.debug;
+    let baseClass = this.props.baseClass || this.baseClassDefault;
 
-    this.keyboard = new Keyboard({
-      ...props,
+    this.keyboard = new Keyboard(`.${baseClass}`, {
+      ...Utilities.parseProps(props),
       onKeyPress: button => this.onKeyPress(button),
-      onChange: input => this.onChange(input)
+      onChange: input => this.onChange(input),
     });
 
     if(debug){
@@ -97,8 +104,12 @@ class KeyboardReact extends Component {
   }
 
   render() {
+    let baseClass = this.props.baseClass || this.baseClassDefault;
+
+    console.log("x",baseClass);
+
     return (
-      <div className="simple-keyboard"></div>
+      <div className={`${baseClass}`}></div>
     );
   }
 }
@@ -111,7 +122,8 @@ KeyboardReact.propTypes = {
   onChange: PropTypes.func,
   onChangeAll: PropTypes.func,
   onKeyPress: PropTypes.func,
-  debug: PropTypes.bool
+  debug: PropTypes.bool,
+  baseClass: PropTypes.string
 };
 
 export default KeyboardReact;
