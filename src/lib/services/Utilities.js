@@ -5,7 +5,7 @@ class Utilities {
 
     static parseProps = (props) => {
       return Object.assign({}, props, {
-        theme: `simple-keyboard ${props.theme}`
+        theme: `simple-keyboard ${(props.theme || "hg-theme-default")}`
       });
 
     }
