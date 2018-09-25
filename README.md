@@ -295,6 +295,28 @@ this.keyboard.dispatch(instance => {
 });
 ```
 
+This is a port of the [simple-keyboard feature](https://www.npmjs.com/package/simple-keyboard#dispatch) of the same name.
+If you'd like to use a more react-like approach to sending props to many instances, you can use shared props like so:
+
+```js
+let sharedProps = {
+  layoutName: this.state.layoutName,
+  onChange: input => this.onChange(input),
+  onKeyPress: button => this.onKeyPress(button),
+};
+
+// Keyboard 1
+<Keyboard {...sharedProps} />
+
+// Keyboard 2
+<Keyboard {...sharedProps} />
+```
+
+This way you can update your desired instances at the same time using `this.setState`.
+
+[![Edit react-simple-keyboard multiple instances demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/8z2jw9okm8)
+
+
 ## Q&A / Use-cases
 
 ### Multiple simple-keyboard instances: Setting a baseClass
