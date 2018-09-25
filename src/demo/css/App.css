@@ -1,6 +1,6 @@
 .demoPage {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  max-width: 1000px;
+  max-width: 850px;
   margin: 0 auto;
   padding-top: 20px;
 }
@@ -29,4 +29,9 @@
 .simple-keyboard.hg-layout-custom {
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
+}
+
+.simple-keyboard.hg-theme-default .hg-button.hg-selectedButton {
+  background: rgba(5, 25, 70, 0.53);
+  color: white;
 }
