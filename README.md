@@ -95,13 +95,29 @@ display={{
   '{bksp}': 'delete',
   '{enter}': '< enter',
   '{shift}': 'shift',
-  '{s}': 'shift',
-  '{tab}': 'tab',
-  '{lock}': 'caps',
-  '{accept}': 'Submit',
-  '{space}': ' ',
-  '{//}': ' '
+  ...
 }}
+```
+
+### mergeDisplay
+
+By default, when you set the `display` property, you replace the default one. This setting merges them instead.
+
+```js
+mergeDisplay={true}
+
+display={{
+  '{bksp}': 'delete',
+  '{enter}': 'submit',
+}}
+
+// Result:
+{
+  '{bksp}': 'delete'
+  '{enter}': 'submit',
+  '{shift}': 'shift', // < Merged from default among others
+  ....
+}
 ```
 
 ### theme
@@ -157,6 +173,21 @@ newLineOnEnter={false}
 inputName={"default"}
 ```
 
+### maxLength
+
+> Restrains react-simple-keyboard's input to a certain length. This should be used in addition to the input element's `maxlength` attribute.
+
+```js
+// Applies to all internal inputs
+maxLength={5}
+
+// Specifies different limiters for each input set, in case you are using the "inputName" option
+maxLength={{
+  'default': 5,
+  'myFancyInput': 10
+}}
+```
+
 ### baseClass
 
 Sets a personalized unique id (base class) for your simple-keyboard instance.
@@ -178,8 +209,7 @@ syncInstanceInputs={false}
 
 ### physicalKeyboardHighlight
 
-When set to true, this option adds the special class (`hg-selectedButton`) to the key that matches.
-For example, when you press the `a` key, that key in simple-keyboard will have the special class until the key is released.
+Enable highlighting of keys pressed on physical keyboard.
 
 For functional keys such as `shift`, note that the key's `event.code` is used. In that instance, pressing the left key will result in the code `ShiftLeft`. Therefore, the key must be named `{shiftleft}`.
 [Click here](https://github.com/hodgef/simple-keyboard/blob/master/src/lib/services/Utilities.js#L58) for some of keys supported out of the box.
@@ -188,6 +218,22 @@ If in doubt, you can also set the `debug` option to `true`.
 
 ```js
 physicalKeyboardHighlight={true}
+```
+
+### physicalKeyboardHighlightTextColor
+
+Define the text color that the physical keyboard highlighted key should have. Used when `physicalKeyboardHighlight` is set to true.
+
+```js
+physicalKeyboardHighlightTextColor={"white"}
+```
+
+### physicalKeyboardHighlightBgColor
+
+Define the background color that the physical keyboard highlighted key should have. Used when `physicalKeyboardHighlight` is set to true.
+
+```js
+physicalKeyboardHighlightBgColor={"#9ab4d0"}
 ```
 
 ### onKeyPress
@@ -204,6 +250,22 @@ onKeyPress={(button) => console.log(button)}
 
 ```js
 onChange={(input) => console.log(input)}
+```
+
+### onRender
+
+> Executes the callback function every time simple-keyboard is rendered (e.g: when you change layouts).
+
+```js
+onRender={() => console.log("simple-keyboard refreshed")}
+```
+
+### onInit
+
+> Executes the callback function once simple-keyboard is rendered for the first time (on initialization).
+
+```js
+onInit={() => console.log("simple-keyboard initialized")}
 ```
 
 ### onChangeAll
@@ -303,10 +365,39 @@ This way you can update your desired instances at the same time using `this.setS
 
 [![Edit react-simple-keyboard multiple instances demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/8z2jw9okm8)
 
+### getButtonElement
+
+> Get the DOM Element of a button. If there are several buttons with the same name, an array of the DOM Elements is returned.
+
+```js
+this.keyboard.getButtonElement('a'); // Gets the "a" key as per your layout
+this.keyboard.getButtonElement('{shift}') // Gets all keys with that name in an array
+```
+
+### addButtonTheme
+
+Adds an entry to the `buttonTheme`. Basically a way to add a class to a button.
+
+Unlike the `buttonTheme` property, which replaces entries, `addButtonTheme` creates entries or modifies existing ones.
+
+```js
+this.keyboard.addButtonTheme("a b c {enter}", "myClass1 myClass2");
+```
+
+### removeButtonTheme
+
+Removes an entry to the `buttonTheme`. Basically a way to remove a class previously added to a button through `buttonTheme` or `addButtonTheme`.
+
+Unlike the `buttonTheme` property, which replaces entries, `removeButtonTheme` removes entries or modifies existing ones.
+
+```js
+this.keyboard.removeButtonTheme("b c", "myClass1 myClass2");
+```
 
 ## Q&A / Use-cases
 
 ### Multiple simple-keyboard instances: Setting a baseClass
+
 Set the *[baseClass](#baseclass)* option to add a unique identifier to each of your simple-keyboard instances.
 If not set, a random baseClass will be used (e.g.: `simplekeyboard_id-qeu5wu` to differentiate your instance from others you may spawn).
 
@@ -317,6 +408,7 @@ If not set, a random baseClass will be used (e.g.: `simplekeyboard_id-qeu5wu` to
 Set the *[inputName](#inputname)* option for each input you want to handle with simple-keyboard.
 
 For example:
+
 ```js
 // Tell simple-keyboard which input is active
 setActiveInput = (event) => {
@@ -350,6 +442,7 @@ render(){
     </div>
   );
 ```
+
 > [See full example](https://github.com/hodgef/react-simple-keyboard/blob/master/src/demo/MultipleInputsDemo.js).
 
 ### Having keys in a different language configuration
@@ -360,10 +453,10 @@ If you'd like to contribute your own layouts, please submit your pull request at
 
 ### How to syncronize multiple instances of simple-keyboard
 
-You can run multiple instances of simple-keyboard. To keep their internal inputs in sync, set the *[syncInstanceInputs](#syncinstanceinputs)* option to `true`. 
+You can run multiple instances of simple-keyboard. To keep their internal inputs in sync, set the *[syncInstanceInputs](#syncinstanceinputs)* option to `true`.
 If you want to send a command to all your simple-keyboard instances at once, you can use the *[dispatch](#dispatch)* method.
 
-### Why is the caps lock button working like shift button?
+### Why is the caps lock button working like shift button
 
 For the sake of simplicity, caps lock and shift do the same action in the main demos.
 If you'd like to show a different layout when you press caps lock, check out the following demo:
@@ -384,7 +477,6 @@ If you'd like to show a different layout when you press caps lock, check out the
 * `npm install`
 * `npm start`
 * Visit [http://localhost:3000/](http://localhost:3000/)
-
 
 ### Other versions
 
