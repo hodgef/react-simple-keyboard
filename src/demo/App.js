@@ -7,13 +7,6 @@ class App extends Component {
     input: '',
     layoutName: "default"
   }
-
-  componentDidMount(){
-    this.keyboard.setInput("Hello World!")
-      .then(input => {
-        this.setState({input: input});
-      });
-  }
   
   onChange = (input) => {
     this.setState({
@@ -55,6 +48,7 @@ class App extends Component {
           layoutName={this.state.layoutName}
           newLineOnEnter={true}
           physicalKeyboardHighlight={true}
+
           layout={{
             'default': [
               '` 1 2 3 4 5 6 7 8 9 0 - = {backspace}',
@@ -72,7 +66,7 @@ class App extends Component {
             ]
           }}
           theme={"hg-layout-default hg-theme-default"}
-          debug={false}
+          debug={true}
         />
       </div>
     );
