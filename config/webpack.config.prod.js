@@ -8,6 +8,7 @@ const eslintFormatter = require('react-dev-utils/eslintFormatter');
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const paths = require('./paths');
 const getClientEnvironment = require('./env');
+const getPackageJson = require('./getPackageJson');
 
 // Webpack uses `publicPath` to determine where the app is being served from.
 // It requires a trailing slash, or the file assets will get an incorrect path.
@@ -42,6 +43,24 @@ const extractTextPluginOptions = shouldUseRelativeAssetPaths
     { publicPath: Array(cssFilename.split('/').length).join('../') }
   : {};
 
+const {
+  version,
+  name,
+  license,
+  repository,
+  author,
+} = getPackageJson('version', 'name', 'license', 'repository', 'author');
+
+const banner = `
+  ${name} v${version}
+  ${repository.url}
+
+  Copyright (c) ${author.replace(/ *\<[^)]*\> */g, " ")}
+
+  This source code is licensed under the ${license} license found in the
+  LICENSE file in the root directory of this source tree.
+  `;
+
 // This is the production configuration.
 // It compiles slowly and is focused on producing a fast and minimal bundle.
 // The development configuration is different and lives in a separate file.
@@ -57,7 +76,8 @@ module.exports = {
     // CRL: Updated whole block with library specific info
     path: paths.appBuild,
     filename: 'index.js',
-    libraryTarget: 'umd'
+    libraryTarget: 'umd',
+    library: 'ReactSimpleKeyboard'
   },
   resolve: {
     // This allows you to set a fallback for where Webpack should look for modules.
@@ -245,6 +265,10 @@ module.exports = {
         ascii_only: true,
       },
       sourceMap: shouldUseSourceMap,
+    }),
+    new webpack.BannerPlugin({ 
+      banner: banner, 
+      entryOnly: true 
     }),
     // Note: this won't work without ExtractTextPlugin.extract(..) in `loaders`.
     new ExtractTextPlugin({
