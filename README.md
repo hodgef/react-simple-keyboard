@@ -482,6 +482,10 @@ If you'd like to show a different layout when you press caps lock, check out the
 
 * Vanilla JS - [simple-keyboard](https://github.com/hodgef/simple-keyboard)
 
+### Questions?
+
+<a href="http://franciscohodge.com/simple-keyboard/chat/join" title="Join our Discord chat" target="_blank"><img src="https://franciscohodge.com/project-pages/simple-keyboard/images/discord.png" align="center" width="200"></a>
+
 ## Contributing
 
 PR's and issues are welcome. Feel free to submit any issues you have at:
