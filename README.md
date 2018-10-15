@@ -1,4 +1,6 @@
 [![npm version](https://badge.fury.io/js/react-simple-keyboard.svg)](https://www.npmjs.com/package/react-simple-keyboard)
+[![Build Status](https://travis-ci.org/hodgef/react-simple-keyboard.svg?branch=master)](https://travis-ci.org/hodgef/react-simple-keyboard)
+[![](https://img.shields.io/badge/discord--chat-join-green.svg?longCache=true&style=flat-square&colorB=7289DA&logo=discord)](http://franciscohodge.com/simple-keyboard/chat/join) 
 
 <a href="https://franciscohodge.com/simple-keyboard/demo" title="View Demo" target="_blank"><img src="https://franciscohodge.com/project-pages/simple-keyboard/images/reactsimplekeyboard-banner_B.png" align="center" width="100%"></a>
 <a href="https://franciscohodge.com/simple-keyboard/demo" title="View Demo" target="_blank"><img src="https://franciscohodge.com/project-pages/simple-keyboard/images/simple-keyboard-240-demo-2.gif" align="center" width="100%"></a>
@@ -44,7 +46,7 @@ class App extends Component {
 export default App;
 ````
 
-[![Edit m75m9v183p](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/m75m9v183p)
+<a href="https://codesandbox.io/s/github/hodgef/demo_npm_react-simple-keyboard" title="run demo" target="_blank"><img src="https://franciscohodge.com/project-pages/simple-keyboard/images/rundemo200.png" width="150" align="center"></a>
 
 > Need a more extensive example? [Click here](https://github.com/hodgef/simple-keyboard/blob/master/src/demo/App.js).
 
@@ -146,7 +148,7 @@ buttonTheme={[
 ]}
 ```
 
-[![Edit react-simple-keyboard customization demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/ol76rx073z)
+<a href="https://codesandbox.io/s/github/hodgef/demo_npm_react-simple-keyboard_customization" title="run demo" target="_blank"><img src="https://franciscohodge.com/project-pages/simple-keyboard/images/rundemo200.png" width="150" align="center"></a>
 
 
 ### debug
@@ -363,7 +365,7 @@ let sharedProps = {
 
 This way you can update your desired instances at the same time using `this.setState`.
 
-[![Edit react-simple-keyboard multiple instances demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/8z2jw9okm8)
+<a href="https://codesandbox.io/s/github/hodgef/demo_npm_react-simple-keyboard_multiple-instances" title="run demo" target="_blank"><img src="https://franciscohodge.com/project-pages/simple-keyboard/images/rundemo200.png" width="150" align="center"></a>
 
 ### getButtonElement
 
@@ -401,7 +403,7 @@ this.keyboard.removeButtonTheme("b c", "myClass1 myClass2");
 Set the *[baseClass](#baseclass)* option to add a unique identifier to each of your simple-keyboard instances.
 If not set, a random baseClass will be used (e.g.: `simplekeyboard_id-qeu5wu` to differentiate your instance from others you may spawn).
 
-[![Edit react-simple-keyboard multiple instances demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/8z2jw9okm8)
+<a href="https://codesandbox.io/s/github/hodgef/demo_npm_react-simple-keyboard_multiple-instances" title="run demo" target="_blank"><img src="https://franciscohodge.com/project-pages/simple-keyboard/images/rundemo200.png" width="150" align="center"></a>
 
 ### Using several inputs
 
@@ -461,7 +463,7 @@ If you want to send a command to all your simple-keyboard instances at once, you
 For the sake of simplicity, caps lock and shift do the same action in the main demos.
 If you'd like to show a different layout when you press caps lock, check out the following demo:
 
-[![Edit react-simple-keyboard handling shift and caps lock demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/930vzzp77o)
+<a href="https://codesandbox.io/s/github/hodgef/demo_npm_react-simple-keyboard_handling-shift-caps-lock" title="run demo" target="_blank"><img src="https://franciscohodge.com/project-pages/simple-keyboard/images/rundemo200.png" width="150" align="center"></a>
 
 ## Demo
 
@@ -469,7 +471,8 @@ If you'd like to show a different layout when you press caps lock, check out the
 
 [https://franciscohodge.com/simple-keyboard/demo](https://franciscohodge.com/simple-keyboard/demo)
 
-[![Edit m75m9v183p](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/m75m9v183p)
+<a href="https://codesandbox.io/s/github/hodgef/demo_npm_react-simple-keyboard" title="run demo" target="_blank"><img src="https://franciscohodge.com/project-pages/simple-keyboard/images/rundemo200.png" width="150" align="center"></a>
+
 
 ### To run demo on your own computer
 
