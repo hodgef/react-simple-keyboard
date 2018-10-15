@@ -93,7 +93,6 @@ function testLayoutStdButtons(){
   /**
    * Check if maxLength is respected
    */
-  console.log("MAX_LENGTH PASSED:", keyboardInstance.keyboard.options.layoutName, keyboardInstance.keyboard.getInput().length, keyboardInstance.keyboard.options.maxLength);
   if(keyboardInstance.keyboard.getInput().length !== keyboardInstance.keyboard.options.maxLength)
     throw "MAX_LENGTH_ISSUE";
   else
