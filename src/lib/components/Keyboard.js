@@ -45,9 +45,6 @@ class KeyboardReact extends Component {
         resolve(input);
       });
     })
-    .catch(reason => {
-      console.warn(reason);
-    });
   }
 
   onKeyPress = (button) => {
