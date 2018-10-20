@@ -1,6 +1,6 @@
 {
   "name": "react-simple-keyboard",
-  "version": "1.6.2",
+  "version": "1.6.3",
   "description": "React.js Virtual Keyboard",
   "main": "build/index.js",
   "scripts": {
@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/hodgef/react-simple-keyboard/issues"
   },
-  "homepage": "https://franciscohodge.com/simple-keyboard",
+  "homepage": "https://virtual-keyboard-javascript.github.io",
   "keywords": [
     "react",
     "reactjs",
