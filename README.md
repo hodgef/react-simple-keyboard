@@ -16,7 +16,7 @@
 Check out the [**Getting Started**](https://simple-keyboard.com/react/getting-started) docs to begin.
 
 ## Documentation
-You can find the **simple-keyboard documentation** [on the website](https://simple-keyboard.com/react/documentation).
+Check out the [**simple-keyboard documentation**](https://simple-keyboard.com/react/documentation) site.
 
 Feel free to browse the [Q&A / Use-cases](https://simple-keyboard.com/react/qa-use-cases/) page for advanced use-cases.
 
