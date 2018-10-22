@@ -5,6 +5,7 @@
 
 # production
 /build
+/dist
 /demo
 
 # testing
