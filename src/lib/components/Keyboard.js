@@ -86,7 +86,6 @@ class KeyboardReact extends Component {
   }
 
   initKeyboard = (props) => {
-    let debug = this.props.debug;
     let baseClass = this.props.baseClass || this.baseClassDefault;
 
     this.keyboard = new Keyboard(`.${baseClass}`, {
