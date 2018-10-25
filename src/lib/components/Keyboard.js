@@ -94,10 +94,6 @@ class KeyboardReact extends Component {
       onKeyPress: button => this.onKeyPress(button),
       onChange: input => this.onChange(input),
     });
-
-    if(debug){
-      console.log(this.keyboard);
-    }
   }
 
   render() {
