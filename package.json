@@ -1,6 +1,6 @@
 {
   "name": "react-simple-keyboard",
-  "version": "1.7.3",
+  "version": "1.7.4",
   "description": "React.js Virtual Keyboard",
   "main": "dist/index.js",
   "scripts": {
@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/hodgef/react-simple-keyboard/issues"
   },
-  "homepage": "https://virtual-keyboard-javascript.github.io",
+  "homepage": "https://virtual-keyboard.js.org/",
   "keywords": [
     "react",
     "reactjs",
@@ -27,9 +27,11 @@
     "onscreen",
     "virtual",
     "component",
+    "screen-keyboard",
     "virtual-keyboard",
     "touchscreen",
     "touch-screen",
+    "kiosk",
     "osk"
   ],
   "license": "MIT",
