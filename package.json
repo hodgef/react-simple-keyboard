@@ -1,6 +1,6 @@
 {
   "name": "react-simple-keyboard",
-  "version": "1.8.0",
+  "version": "1.8.1",
   "description": "React.js Virtual Keyboard",
   "main": "dist/index.js",
   "scripts": {
