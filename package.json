@@ -36,7 +36,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "simple-keyboard": "^2.7.5"
+    "simple-keyboard": "^2.7.8"
   },
   "devDependencies": {
     "autoprefixer": "7.1.6",
