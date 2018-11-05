@@ -50,7 +50,7 @@
     "chalk": "2.4.1",
     "copy-webpack-plugin": "^4.3.1",
     "css-loader": "0.28.11",
-    "dotenv": "4.0.0",
+    "dotenv": "6.1.0",
     "eslint": "4.10.0",
     "eslint-config-react-app": "^2.0.1",
     "eslint-loader": "1.9.0",
