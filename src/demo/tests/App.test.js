@@ -35,3 +35,20 @@ it('Demo {shift} will work', () => {
   wrapper.instance().keyboard.keyboard.getButtonElement("{shiftleft}").onclick();
   expect(wrapper.instance().state.layoutName).toBe("default");
 });
+
+it('Demo onChangeInput will work', () => {
+  testUtil.setDOM();
+  const wrapper = mount(<App />, { attachTo: document.body.firstChild });
+
+  wrapper.instance().onChangeInput({
+    target: {
+      value: "test"
+    }
+  });
+
+  wrapper.find('textarea').simulate('change', {
+    target: {
+      value: "test"
+    }
+  });
+});

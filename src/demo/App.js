@@ -34,12 +34,24 @@ class App extends Component {
       layoutName: shiftToggle
     });
   }
+
+  onChangeInput = event => {
+    let input = event.target.value;
+    this.setState(
+      {
+        input: input
+      },
+      () => {
+        this.keyboard.setInput(input);
+      }
+    );
+  };
   
   render(){
     return (
       <div className={"demoPage"}>
         <div className={"screenContainer"}>
-          <textarea className={"inputContainer"} value={this.state.input} />
+          <textarea className={"inputContainer"} value={this.state.input} onChange={e => this.onChangeInput(e)} />
         </div>
         <Keyboard
           ref={r => this.keyboard = r}

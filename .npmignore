@@ -4,12 +4,18 @@
 # testing
 /coverage
 
+# docs
+/docs
+
 # misc
 .DS_Store
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
+/.github
+/demo
+.esdoc.json
 
 npm-debug.log*
 yarn-debug.log*
