@@ -35,9 +35,7 @@
     "osk"
   ],
   "license": "MIT",
-  "dependencies": {
-    "simple-keyboard": "^2.8.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "7.1.0",
     "@svgr/webpack": "2.4.1",
@@ -83,6 +81,7 @@
     "react-dom": "^16.6.1",
     "resolve": "1.8.1",
     "sass-loader": "7.1.0",
+    "simple-keyboard": "^2.8.0",
     "style-loader": "0.23.0",
     "terser-webpack-plugin": "1.1.0",
     "url-loader": "1.1.1",
