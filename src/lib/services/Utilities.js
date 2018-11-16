@@ -1,14 +1,6 @@
-class Utilities {
-    static getRandomBaseClass = () => {
-      return `simplekeyboard_id-${Math.random().toString(36).substring(7)}`;
-    }
+export const getRandomBaseClass = () => `simplekeyboard_id-${Math.random().toString(36).substring(7)}`;
 
-    static parseProps = (props) => {
-      return Object.assign({}, props, {
-        theme: `simple-keyboard ${(props.theme || "hg-theme-default")}`
-      });
-
-    }
-}
-
-export default Utilities;
+export const parseProps = props => ({
+  ...props,
+  theme: `simple-keyboard ${(props.theme || "hg-theme-default")}`
+})

@@ -1,66 +1,57 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+
 import Keyboard from '../lib';
+
 import './css/App.css';
 
 class App extends Component {
   state = {
     input: '',
-    layoutName: "default"
+    layoutName: 'default'
   }
   
-  onChange = (input) => {
-    this.setState({
-      input: input
-    }, () => {
-      console.log("Input changed", input);
-    });
-  }
+  keyboard = React.createRef()
+  
+  onChange = input => this.setState({ input }, () => console.log('Input changed', input));
 
-  onKeyPress = (button) => {
-    console.log("Button pressed", button);
+  onKeyPress = button => {
+    console.log('Button pressed', button);
 
     /**
      * Shift functionality
      */
-    if(button === "{capslock}" || button === "{shiftleft}" || button === "{shiftright}")
+    if(['{capslock}', '{shiftleft}', '{shiftright}'].includes(button))
       this.handleShiftButton();
   }
 
   handleShiftButton = () => {
-    let layoutName = this.state.layoutName;
-    let shiftToggle = layoutName === "default" ? "shift" : "default";
+    const { state: { layoutName } } = this;
+    const shiftToggle = layoutName === 'default' ? 'shift' : 'default';
 
-    this.setState({
-      layoutName: shiftToggle
-    });
+    this.setState({ layoutName: shiftToggle });
   }
 
   onChangeInput = event => {
-    let input = event.target.value;
-    this.setState(
-      {
-        input: input
-      },
-      () => {
-        this.keyboard.setInput(input);
-      }
-    );
+    const input = event.target.value;
+
+    this.setState({ input: event.target.value }, () => this.keyboard.current.setInput(input));
   };
   
-  render(){
+  render() {
+    const { keyboard, state: { input, layoutName }, onChangeInput, onChange, onKeyPress } = this
+
     return (
-      <div className={"demoPage"}>
-        <div className={"screenContainer"}>
-          <textarea className={"inputContainer"} value={this.state.input} onChange={e => this.onChangeInput(e)} />
+      <div className='demoPage'>
+        <div className='screenContainer'>
+          <textarea className='inputContainer' value={input} onChange={onChangeInput} />
         </div>
         <Keyboard
-          ref={r => this.keyboard = r}
-          onChange={input => this.onChange(input)}
-          onKeyPress={button => this.onKeyPress(button)}
-          layoutName={this.state.layoutName}
-          newLineOnEnter={true}
-          physicalKeyboardHighlight={true}
-
+          ref={keyboard}
+          onChange={onChange}
+          onKeyPress={onKeyPress}
+          layoutName={layoutName}
+          newLineOnEnter
+          physicalKeyboardHighlight
           layout={{
             'default': [
               '` 1 2 3 4 5 6 7 8 9 0 - = {backspace}',
@@ -77,13 +68,12 @@ class App extends Component {
               '.com @ {space}'
             ]
           }}
-          theme={"hg-layout-default hg-theme-default"}
-          debug={true}
+          theme='hg-layout-default hg-theme-default'
+          debug
         />
       </div>
     );
   }
- 
 }
 
 export default App;
