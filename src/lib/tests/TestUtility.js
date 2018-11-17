@@ -1,22 +1,15 @@
-export default class TestUtility {
-  /**
-   * FUNCTIONS
-   */
+export const clearDOM = () => document.body.innerHTML = '';
 
-  setDOM = (divClass, divID) => {
-    this.clear();
-    const div = document.createElement('div');
-    div.className += divClass || "simple-keyboard";
+export const setDOM = (divClass, divID) => {
+  clearDOM()
 
-    if(divID)
-      div.setAttribute("id", divID);
+  const div = document.createElement('div');
+  div.className += divClass || 'simple-keyboard';
 
-    document.body.appendChild(div);
+  if (divID)
+    div.setAttribute('id', divID);
 
-    return div;
-  }
+  document.body.appendChild(div);
 
-  clear = () => {
-    document.body.innerHTML = "";
-  }
+  return div;
 }

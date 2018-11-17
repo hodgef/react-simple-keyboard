@@ -1,4 +1,3 @@
-import TestUtility from '../../lib/tests/TestUtility';
-let testUtil = new TestUtility();
+import { setDOM } from '../../lib/tests/TestUtility';
 
-testUtil.setDOM("container", "root");
+setDOM('container', 'root');
