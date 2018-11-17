@@ -1,6 +1,6 @@
 {
   "name": "react-simple-keyboard",
-  "version": "1.10.0",
+  "version": "1.10.1",
   "description": "React.js Virtual Keyboard",
   "main": "build/index.js",
   "scripts": {
@@ -38,6 +38,9 @@
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "7.1.0",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
     "@svgr/webpack": "2.4.1",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "9.0.0",
@@ -76,13 +79,13 @@
     "postcss-loader": "3.0.0",
     "postcss-preset-env": "6.0.6",
     "postcss-safe-parser": "4.0.1",
-    "react": "^16.6.1",
+    "react": "^16.6.3",
     "react-app-polyfill": "^0.1.3",
     "react-dev-utils": "^6.1.1",
-    "react-dom": "^16.6.1",
+    "react-dom": "^16.6.3",
     "resolve": "1.8.1",
     "sass-loader": "7.1.0",
-    "simple-keyboard": "^2.8.1",
+    "simple-keyboard": "^2.9.0",
     "style-loader": "0.23.0",
     "terser-webpack-plugin": "1.1.0",
     "url-loader": "1.1.1",
@@ -144,7 +147,13 @@
   },
   "babel": {
     "presets": [
-      "react-app"
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-proposal-class-properties"
+      ]
     ]
   }
 }
