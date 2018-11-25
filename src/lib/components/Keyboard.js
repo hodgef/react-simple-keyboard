@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Keyboard from 'simple-keyboard';
-import { getRandomBaseClass, parseProps } from '../services/Utilities';
+import { parseProps } from '../services/Utilities';
 import 'simple-keyboard/build/css/index.css';
 
 class KeyboardReact extends Component {
   state = { input: '' }
 
-  baseClassDefault = getRandomBaseClass()
+  baseClassDefault = "simple-keyboard";
 
   componentDidMount = () => this.initKeyboard();
 
