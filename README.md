@@ -2,10 +2,12 @@
   <a href="https://simple-keyboard.com/demo" title="View Demo" target="_blank"><img src="https://franciscohodge.com/project-pages/simple-keyboard/images/reactsimplekeyboard-banner_B.png" align="center" width="100%"></a>
   <a href="https://simple-keyboard.com/demo" title="View Demo" target="_blank"><img src="https://franciscohodge.com/project-pages/simple-keyboard/images/simple-keyboard-10172018.gif" align="center" width="100%"></a>
   <blockquote>The easily customisable and responsive on-screen virtual keyboard for React.js projects.</blockquote>
-  <p><a href="https://github.com/hodgef/react-simple-keyboard/blob/master/LICENSE" target="_blank"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
+  <p>
   <a href="https://www.npmjs.com/package/react-simple-keyboard" target="_blank"><img src="https://img.shields.io/npm/v/react-simple-keyboard.svg?style=flat" alt="npm version"></a>
   <a href="https://travis-ci.org/hodgef/react-simple-keyboard" target="_blank"><img src="https://travis-ci.org/hodgef/react-simple-keyboard.svg?branch=master" alt="Build Status"></a>
   <a href="https://codecov.io/gh/hodgef/react-simple-keyboard" target="_blank"><img src="https://img.shields.io/codecov/c/github/hodgef/react-simple-keyboard/master.svg?style=flat" alt="Coverage Status"></a>
+  <img src="https://img.shields.io/david/dev/hodgef/react-simple-keyboard.svg" alt="Dev dependencies">
+  <a href="https://www.codacy.com/app/hodgef/react-simple-keyboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=hodgef/react-simple-keyboard&amp;utm_campaign=Badge_Grade" target="_blank"><img src="https://api.codacy.com/project/badge/Grade/41ac769582ea4182a6bcfbd1a20e409c" alt="Codacy Badge"></a>
   </p>
 </div>
 
@@ -32,7 +34,9 @@ Feel free to browse the [Q&A / Use-cases](https://simple-keyboard.com/react/qa-u
 
 ### Other versions
 
-* Vanilla JS - [simple-keyboard](https://github.com/hodgef/simple-keyboard)
+* [Vanilla JS](https://github.com/hodgef/simple-keyboard)
+* [Angular](https://simple-keyboard.com/demo)
+* [Vue.js](https://simple-keyboard.com/demo)
 
 ### Questions?
 
