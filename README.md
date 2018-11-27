@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://simple-keyboard.com/demo" title="View Demo" target="_blank"><img src="https://franciscohodge.com/project-pages/simple-keyboard/images/reactsimplekeyboard-banner_B.png" align="center" width="100%"></a>
-  <a href="https://simple-keyboard.com/demo" title="View Demo" target="_blank"><img src="https://franciscohodge.com/project-pages/simple-keyboard/images/simple-keyboard-10172018.gif" align="center" width="100%"></a>
+  <a href="https://simple-keyboard.com/demo" title="View Demo" target="_blank"><img src="https://franciscohodge.com/project-pages/simple-keyboard/images/skdemo-4x2.gif" align="center" width="100%"></a>
   <blockquote>The easily customisable and responsive on-screen virtual keyboard for React.js projects.</blockquote>
   <p>
   <a href="https://www.npmjs.com/package/react-simple-keyboard" target="_blank"><img src="https://img.shields.io/npm/v/react-simple-keyboard.svg?style=flat" alt="npm version"></a>
