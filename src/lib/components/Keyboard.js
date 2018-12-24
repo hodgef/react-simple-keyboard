@@ -7,7 +7,7 @@ import 'simple-keyboard/build/css/index.css';
 class KeyboardReact extends Component {
   state = { input: '' }
 
-  baseClassDefault = "simple-keyboard";
+  baseClassDefault = "react-simple-keyboard";
 
   componentDidMount = () => this.initKeyboard();
 
