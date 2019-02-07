@@ -1,6 +1,6 @@
 {
   "name": "react-simple-keyboard",
-  "version": "1.15.2",
+  "version": "1.16.0",
   "description": "React.js Virtual Keyboard",
   "main": "build/index.js",
   "scripts": {
@@ -51,6 +51,7 @@
     "bfj": "6.1.1",
     "case-sensitive-paths-webpack-plugin": "2.2.0",
     "chalk": "2.4.2",
+    "copy-webpack-plugin": "^4.6.0",
     "css-loader": "2.1.0",
     "dotenv": "6.2.0",
     "dotenv-expand": "4.2.0",
