@@ -23,6 +23,7 @@ const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin-alt')
 const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const getPackageJson = require('./getPackageJson');
+const PrettierPlugin = require("prettier-webpack-plugin");
 
 
 // Webpack uses `publicPath` to determine where the app is being served from.
@@ -517,6 +518,7 @@ module.exports = {
         to: paths.appBuild
       }
     ]),
+    new PrettierPlugin(),
     // Generate a service worker script that will precache, and keep up to date,
     // the HTML & assets that are part of the Webpack build.
     /*new WorkboxWebpackPlugin.GenerateSW({

@@ -1,83 +1,87 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import Keyboard from 'simple-keyboard';
-import { parseProps } from '../services/Utilities';
-import 'simple-keyboard/build/css/index.css';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import Keyboard from "simple-keyboard";
+import { parseProps } from "../services/Utilities";
+import "simple-keyboard/build/css/index.css";
 
 class KeyboardReact extends Component {
-  state = { input: '' }
+  state = { input: "" };
 
   baseClassDefault = "react-simple-keyboard";
 
   componentDidMount = () => this.initKeyboard();
 
-  componentWillReceiveProps = nextProps => this.keyboard.setOptions(parseProps(nextProps));
+  componentWillReceiveProps = nextProps =>
+    this.keyboard.setOptions(parseProps(nextProps));
 
   clearInput = inputName => {
-    this.setState({ input: '' });
-    this.keyboard.clearInput(inputName || 'default');
-  }
+    this.setState({ input: "" });
+    this.keyboard.clearInput(inputName || "default");
+  };
 
-  getInput = inputName => inputName ? this.keyboard.input[inputName] : this.state.input;
+  getInput = inputName =>
+    inputName ? this.keyboard.input[inputName] : this.state.input;
 
-  setInput = (input, inputName) => new Promise(resolve => {
-    this.keyboard.setInput(input, inputName);
-    this.setState({ input }, () => resolve(input));
-  })
+  setInput = (input, inputName) =>
+    new Promise(resolve => {
+      this.keyboard.setInput(input, inputName);
+      this.setState({ input }, () => resolve(input));
+    });
 
   onKeyPress = button => {
-    const { debug, onKeyPress } = this.props;
+    const { debug, onKeyPress } = this.props;
 
     /**
      * Calling user onKeyPress
      */
-    if (typeof onKeyPress === "function")
-      onKeyPress(button);
+    if (typeof onKeyPress === "function") onKeyPress(button);
 
     if (debug) {
       console.log("Key pressed:", button);
     }
-  }
+  };
 
   onChange = input => {
-    const { keyboard, props: { debug, onChange, onChangeAll }, state } = this;
+    const {
+      keyboard,
+      props: { debug, onChange, onChangeAll },
+      state
+    } = this;
 
     this.setState({ input }, () => {
       if (debug) {
-        console.log('Input changed:', state.input);
+        console.log("Input changed:", state.input);
       }
 
       /**
        * Calling user onChange
        */
-      if (typeof onChange === "function")
-        onChange(this.state.input);
+      if (typeof onChange === "function") onChange(this.state.input);
 
       /**
        * Calling user onChangeAll
        */
-      if (typeof onChangeAll === "function")
-        onChangeAll(keyboard.input);
+      if (typeof onChangeAll === "function") onChangeAll(keyboard.input);
     });
-  }
+  };
 
   initKeyboard = () => {
-    const { onKeyPress, onChange, props, getCssBaseClass } = this
-    const cssClass = getCssBaseClass()
+    const { onKeyPress, onChange, props, getCssBaseClass } = this;
+    const cssClass = getCssBaseClass();
 
     this.keyboard = new Keyboard(`.${cssClass}`, {
       ...parseProps(props),
       onKeyPress,
       onChange
     });
-  }
+  };
 
   getCssBaseClass = () => this.props.baseClass || this.baseClassDefault;
 
   render() {
-    const { getCssBaseClass } = this
+    const { getCssBaseClass } = this;
 
-    return <div className={`${getCssBaseClass()}`}></div>;
+    return <div className={`${getCssBaseClass()}`} />;
   }
 }
 
