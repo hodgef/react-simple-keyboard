@@ -23,8 +23,6 @@ Feel free to browse the [Q&A / Use-cases](https://simple-keyboard.com/react/qa-u
 
 [https://simple-keyboard.com/demo](https://simple-keyboard.com/demo)
 
-<a href="https://codesandbox.io/s/github/hodgef/react-simple-keyboard-demos/tree/master/" title="run demo" target="_blank"><img src="https://franciscohodge.com/project-pages/simple-keyboard/images/rundemo200.png" width="150" align="center"></a>
-
 ### To run demo on your own computer
 
 * Clone this repository
