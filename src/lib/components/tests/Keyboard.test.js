@@ -32,11 +32,11 @@ it('Keyboard getInput, setInput, clearInput will work', () => {
   const props = {};
   const wrapper = mount(<Keyboard {...props} />, { attachTo: document.body.firstChild });
 
-  wrapper.instance().setInput("test");
-  expect(wrapper.instance().getInput()).toBe("test");
+  wrapper.instance().keyboard.setInput("test");
+  expect(wrapper.instance().keyboard.getInput()).toBe("test");
 
-  wrapper.instance().clearInput();
-  expect(wrapper.instance().getInput()).toBeFalsy();
+  wrapper.instance().keyboard.clearInput();
+  expect(wrapper.instance().keyboard.getInput()).toBeFalsy();
 });
 
 it('Keyboard getInput will work with param', () => {
@@ -45,8 +45,9 @@ it('Keyboard getInput will work with param', () => {
   const props = {};
   const wrapper = mount(<Keyboard {...props} />, { attachTo: document.body.firstChild });
 
-  wrapper.instance().setInput("testy", "testIpt");
-  expect(wrapper.instance().getInput("testIpt")).toBe("testy");
+
+  wrapper.instance().keyboard.setInput("testy", "testIpt");
+  expect(wrapper.instance().keyboard.getInput("testIpt")).toBe("testy");
 });
 
 it('Keyboard onKeyPress will work', () => {
@@ -73,7 +74,11 @@ it('Keyboard onChange will work', () => {
   setDOM("container");
 
   let changed = false;
-  const props = { onChange: () => { changed = true } };
+  const props = {
+    onChange: () => {
+      changed = true;
+    }
+  };
   const wrapper = mount(<Keyboard {...props} />, { attachTo: document.body.firstChild });
 
   wrapper.instance().keyboard.getButtonElement("q").onclick();
@@ -93,9 +98,14 @@ it('Keyboard onChangeAll will work', () => {
   setDOM("container");
 
   let changed = false;
-  const props = { onChangeAll: () => { changed = true } };
-  const wrapper = mount(<Keyboard {...props} />, { attachTo: document.body.firstChild });
+
+  const wrapper = mount(<Keyboard
+    onChangeAll={() => {
+      changed = true;
+    }}
+  />, { attachTo: document.body.firstChild });
 
   wrapper.instance().keyboard.getButtonElement("q").onclick();
+
   expect(changed).toBeTruthy();
 });
