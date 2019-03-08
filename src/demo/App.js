@@ -7,7 +7,8 @@ import './css/App.css';
 class App extends Component {
   state = {
     input: '',
-    layoutName: 'default'
+    layoutName: 'default',
+    buttonTheme: []
   }
   
   keyboard = React.createRef()
@@ -34,22 +35,23 @@ class App extends Component {
   onChangeInput = event => {
     const input = event.target.value;
 
-    this.setState({ input: event.target.value }, () => this.keyboard.current.setInput(input));
+    this.setState({ input: event.target.value }, () => this.keyboardRef.keyboard.setInput(input));
   };
   
   render() {
-    const { keyboard, state: { input, layoutName }, onChangeInput, onChange, onKeyPress } = this
-
+    const { state: { input, layoutName, buttonTheme }, onChangeInput, onChange, onKeyPress } = this
     return (
       <div className='demoPage'>
         <div className='screenContainer'>
           <textarea className='inputContainer' value={input} onChange={onChangeInput} />
         </div>
         <Keyboard
-          ref={keyboard}
+          stateToIgnore={input}
+          ref={r => this.keyboardRef = r}
           onChange={onChange}
           onKeyPress={onKeyPress}
           layoutName={layoutName}
+          buttonTheme={buttonTheme}
           newLineOnEnter
           physicalKeyboardHighlight
           layout={{
