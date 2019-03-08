@@ -10,7 +10,7 @@ import App from '../App';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-const keyboardComponent = wrapper => wrapper.instance().keyboard.current.keyboard
+const keyboard = (wrapper) => wrapper.instance().keyboardRef.keyboard;
 
 it('Demo will load', () => {
   setDOM();
@@ -22,8 +22,8 @@ it('Demo onChange will work', () => {
   
   const wrapper = mount(<App />, { attachTo: document.body.firstChild });
 
-  keyboardComponent(wrapper).getButtonElement('q').onclick();
-  expect(wrapper.instance().state.input).toBe('q');
+  keyboard(wrapper).getButtonElement('q').onclick();
+  expect(keyboard(wrapper).getInput()).toBe('q');
 });
 
 it('Demo {shift} will work', () => {
@@ -31,10 +31,10 @@ it('Demo {shift} will work', () => {
 
   const wrapper = mount(<App />, { attachTo: document.body.firstChild });
 
-  keyboardComponent(wrapper).getButtonElement('{shiftleft}').onclick();
+  keyboard(wrapper).getButtonElement('{shiftleft}').onclick();
   expect(wrapper.instance().state.layoutName).toBe('shift');
 
-  keyboardComponent(wrapper).getButtonElement('{shiftleft}').onclick();
+  keyboard(wrapper).getButtonElement('{shiftleft}').onclick();
   expect(wrapper.instance().state.layoutName).toBe('default');
 });
 
