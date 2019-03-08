@@ -6,7 +6,6 @@
   <a href="https://www.npmjs.com/package/react-simple-keyboard" target="_blank"><img src="https://img.shields.io/npm/v/react-simple-keyboard.svg?style=flat" alt="npm version"></a>
   <a href="https://travis-ci.org/hodgef/react-simple-keyboard" target="_blank"><img src="https://travis-ci.org/hodgef/react-simple-keyboard.svg?branch=master" alt="Build Status"></a>
   <a href="https://codecov.io/gh/hodgef/react-simple-keyboard" target="_blank"><img src="https://img.shields.io/codecov/c/github/hodgef/react-simple-keyboard/master.svg?style=flat" alt="Coverage Status"></a>
-  <img src="https://img.shields.io/david/dev/hodgef/react-simple-keyboard.svg" alt="Dev dependencies">
   <a href="https://www.codacy.com/app/hodgef/react-simple-keyboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=hodgef/react-simple-keyboard&amp;utm_campaign=Badge_Grade" target="_blank"><img src="https://api.codacy.com/project/badge/Grade/41ac769582ea4182a6bcfbd1a20e409c" alt="Codacy Badge"></a>
   </p>
 </div>
