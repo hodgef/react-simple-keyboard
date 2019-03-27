@@ -70,7 +70,6 @@ class App extends Component {
               '.com @ {space}'
             ]
           }}
-          theme='hg-theme-default'
           debug
         />
       </div>

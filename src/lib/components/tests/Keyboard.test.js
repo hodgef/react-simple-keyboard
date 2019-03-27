@@ -3,7 +3,7 @@ import Adapter from 'enzyme-adapter-react-16';
 import Enzyme from 'enzyme';
 import React from 'react';
 
-import { setDOM } from '../../tests/TestUtility';
+import { setDOM } from '../../../utils/TestUtility';
 import Keyboard from '../Keyboard';
 
 Enzyme.configure({ adapter: new Adapter() });
@@ -95,6 +95,22 @@ it('Keyboard onChange will work without onChange prop', () => {
 });
 
 it('Keyboard onChangeAll will work', () => {
+  setDOM("container");
+
+  let changed = false;
+
+  const wrapper = mount(<Keyboard
+    onChangeAll={() => {
+      changed = true;
+    }}
+  />, { attachTo: document.body.firstChild });
+
+  wrapper.instance().keyboard.getButtonElement("q").onclick();
+
+  expect(changed).toBeTruthy();
+});
+
+it('Keyboard will have default theme', () => {
   setDOM("container");
 
   let changed = false;

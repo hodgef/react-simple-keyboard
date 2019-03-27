@@ -3,9 +3,9 @@ import Adapter from 'enzyme-adapter-react-16';
 import Enzyme from 'enzyme';
 import React from 'react';
 
-import './BaseDOM';
+import '../../utils/BaseDOM';
 import '../index';
-import { setDOM } from '../../lib/tests/TestUtility';
+import { setDOM } from '../../utils/TestUtility';
 import App from '../App';
 
 Enzyme.configure({ adapter: new Adapter() });
