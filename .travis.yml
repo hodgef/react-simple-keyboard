@@ -1,13 +1,13 @@
 language: node_js
 node_js:
- - "11.2"
+ - '11.2'
 install:
   - npm install -g codecov
   - npm install
 script:
 - npm run start -- --testMode
 - npm run demo
-- npm run test -- --coverage
+- npm run coverage
 - codecov
 after_success:
   - wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh

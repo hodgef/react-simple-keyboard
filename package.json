@@ -1,13 +1,15 @@
 {
   "name": "react-simple-keyboard",
-  "version": "1.21.9",
+  "version": "1.22.0",
   "description": "React.js Virtual Keyboard",
   "main": "build/index.js",
+  "types": "build/index.d.ts",
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "demo": "node scripts/demo.js",
     "test": "node scripts/test.js",
+    "coverage": "node scripts/test.js --coverage --watchAll=false",
     "prepare": "npm run build"
   },
   "repository": {
@@ -28,73 +30,77 @@
     "virtual",
     "component",
     "screen-keyboard",
+    "component",
     "virtual-keyboard",
     "touchscreen",
     "touch-screen",
     "kiosk",
-    "osk"
+    "osk",
+    "js"
   ],
   "license": "MIT",
-  "dependencies": {},
   "devDependencies": {
-    "@babel/core": "7.4.3",
-    "@babel/plugin-proposal-class-properties": "^7.4.0",
-    "@babel/preset-env": "^7.4.3",
+    "@babel/core": "7.4.4",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
     "@babel/preset-react": "^7.0.0",
     "@svgr/webpack": "4.2.0",
-    "babel-core": "7.0.0-bridge.0",
+    "@typescript-eslint/eslint-plugin": "1.7.0",
+    "@typescript-eslint/parser": "1.7.0",
     "babel-eslint": "10.0.1",
     "babel-jest": "24.7.1",
     "babel-loader": "8.0.5",
-    "babel-plugin-named-asset-import": "^0.3.1",
-    "babel-preset-react-app": "^7.0.2",
-    "bfj": "6.1.1",
+    "babel-plugin-named-asset-import": "^0.3.2",
+    "babel-preset-react-app": "^8.0.0",
     "case-sensitive-paths-webpack-plugin": "2.2.0",
-    "chalk": "2.4.2",
     "copy-webpack-plugin": "^5.0.2",
     "css-loader": "2.1.1",
     "dotenv": "7.0.0",
     "dotenv-expand": "5.1.0",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.12.1",
-    "eslint": "5.16.0",
-    "eslint-config-react-app": "^3.0.8",
+    "eslint": "^5.16.0",
+    "eslint-config-react-app": "^4.0.0",
     "eslint-loader": "2.1.2",
     "eslint-plugin-flowtype": "3.6.1",
-    "eslint-plugin-import": "2.17.0",
+    "eslint-plugin-import": "2.17.2",
     "eslint-plugin-jsx-a11y": "6.2.1",
     "eslint-plugin-react": "7.12.4",
+    "eslint-plugin-react-hooks": "^1.5.0",
     "file-loader": "3.0.1",
-    "fork-ts-checker-webpack-plugin-alt": "0.4.14",
     "fs-extra": "7.0.1",
     "html-webpack-plugin": "4.0.0-beta.5",
     "identity-obj-proxy": "3.0.0",
+    "is-wsl": "^2.0.0",
     "jest": "24.7.1",
-    "jest-pnp-resolver": "1.2.1",
+    "jest-environment-jsdom-fourteen": "0.1.0",
     "jest-resolve": "24.7.1",
+    "jest-watch-typeahead": "0.3.0",
     "mini-css-extract-plugin": "0.6.0",
     "optimize-css-assets-webpack-plugin": "5.0.1",
-    "pnp-webpack-plugin": "1.4.1",
+    "pnp-webpack-plugin": "1.4.3",
     "postcss-flexbugs-fixes": "4.1.0",
     "postcss-loader": "3.0.0",
+    "postcss-normalize": "7.0.1",
     "postcss-preset-env": "6.6.0",
     "postcss-safe-parser": "4.0.1",
     "prettier": "^1.17.0",
     "prettier-webpack-plugin": "^1.2.0",
     "react": "^16.8.6",
-    "react-app-polyfill": "^0.2.2",
-    "react-dev-utils": "^8.0.0",
+    "react-app-polyfill": "^1.0.0",
+    "react-dev-utils": "^9.0.0",
     "react-dom": "^16.8.6",
-    "resolve": "1.10.0",
+    "resolve": "1.10.1",
     "sass-loader": "7.1.0",
-    "simple-keyboard": "2.20.9",
+    "simple-keyboard": "2.21.0",
+    "semver": "6.0.0",
     "style-loader": "0.23.1",
     "terser-webpack-plugin": "1.2.3",
     "url-loader": "1.1.2",
     "webpack": "4.30.0",
     "webpack-dev-server": "3.3.1",
     "webpack-manifest-plugin": "2.0.4",
-    "workbox-webpack-plugin": "4.2.0"
+    "workbox-webpack-plugin": "4.3.0"
   },
   "eslintConfig": {
     "extends": "react-app",
@@ -105,12 +111,19 @@
       }
     }
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not ie <= 11",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
@@ -123,11 +136,11 @@
     "setupFiles": [
       "react-app-polyfill/jsdom"
     ],
+    "setupFilesAfterEnv": [],
     "testMatch": [
       "<rootDir>/src/**/tests/**/*.{js,jsx,ts,tsx}"
     ],
-    "testEnvironment": "jsdom",
-    "testURL": "http://localhost",
+    "testEnvironment": "jest-environment-jsdom-fourteen",
     "transform": {
       "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
       "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
@@ -137,6 +150,7 @@
       "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$",
       "^.+\\.module\\.(css|sass|scss)$"
     ],
+    "modulePaths": [],
     "moduleNameMapper": {
       "^react-native$": "react-native-web",
       "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
@@ -152,6 +166,10 @@
       "web.jsx",
       "jsx",
       "node"
+    ],
+    "watchPlugins": [
+      "jest-watch-typeahead/filename",
+      "jest-watch-typeahead/testname"
     ]
   },
   "babel": {
