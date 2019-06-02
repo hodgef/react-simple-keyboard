@@ -1,6 +1,6 @@
 {
   "name": "react-simple-keyboard",
-  "version": "1.22.3",
+  "version": "1.23.0",
   "description": "React.js Virtual Keyboard",
   "main": "build/index.js",
   "types": "build/index.d.ts",
@@ -93,7 +93,7 @@
     "react-dom": "^16.8.6",
     "resolve": "1.11.0",
     "sass-loader": "7.1.0",
-    "simple-keyboard": "2.21.4",
+    "simple-keyboard": "2.22.0",
     "semver": "6.1.1",
     "style-loader": "0.23.1",
     "terser-webpack-plugin": "1.3.0",
