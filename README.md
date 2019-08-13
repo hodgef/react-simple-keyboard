@@ -1,15 +1,33 @@
-<div align="center">
-  <a href="https://simple-keyboard.com/demo" title="View Demo" target="_blank"><img src="https://franciscohodge.com/project-pages/simple-keyboard/images/reactsimplekeyboard-banner_B.png" align="center" width="100%"></a>
-  <a href="https://simple-keyboard.com/demo" title="View Demo" target="_blank"><img src="https://franciscohodge.com/project-pages/simple-keyboard/images/skdemo-4x2.gif" align="center" width="100%"></a>
-  <blockquote>The easily customisable and responsive on-screen virtual keyboard for React.js projects.</blockquote>
-  <p>
-  <a href="https://www.npmjs.com/package/react-simple-keyboard" target="_blank"><img src="https://img.shields.io/npm/v/react-simple-keyboard.svg?style=flat" alt="npm version"></a>
-  <a href="https://travis-ci.org/hodgef/react-simple-keyboard" target="_blank"><img src="https://travis-ci.org/hodgef/react-simple-keyboard.svg?branch=master" alt="Build Status"></a>
-  <img src="https://img.shields.io/david/hodgef/js-library-boilerplate.svg" />
-  <a href="https://codecov.io/gh/hodgef/react-simple-keyboard" target="_blank"><img src="https://img.shields.io/codecov/c/github/hodgef/react-simple-keyboard/master.svg?style=flat" alt="Coverage Status"></a>
-  <a href="https://www.codacy.com/app/hodgef/react-simple-keyboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=hodgef/react-simple-keyboard&amp;utm_campaign=Badge_Grade" target="_blank"><img src="https://api.codacy.com/project/badge/Grade/41ac769582ea4182a6bcfbd1a20e409c" alt="Codacy Badge"></a>
-  </p>
-</div>
+<p>
+  <a href="https://simple-keyboard.com/demo">
+	<img alt="simple-keyboard: Javscript Virtual Keyboard" src="https://i.imgur.com/AcGCUxk.png">
+  </a>
+
+  <a href="https://www.npmjs.com/package/react-simple-keyboard">
+    <img src="https://badgen.net/npm/v/react-simple-keyboard?color=blue" alt="npm version">
+  </a>
+
+  <a href="https://bundlephobia.com/result?p=react-simple-keyboard">
+    <img src="https://badgen.net/bundlephobia/minzip/react-simple-keyboard/?color=green" alt="install size">
+  </a>
+
+  <a href="https://travis-ci.org/hodgef/react-simple-keyboard">
+    <img src="https://api.travis-ci.org/hodgef/react-simple-keyboard.svg?branch=master"
+         alt="build status">
+  </a>
+  
+  <a href="https://david-dm.org/hodgef/react-simple-keyboard">
+    <img src="https://badgen.net/david/dep/hodgef/react-simple-keyboard" alt="coverage">
+  </a>
+
+  <a href="https://codecov.io/gh/hodgef/react-simple-keyboard">
+    <img src="https://badgen.net/codecov/c/github/hodgef/react-simple-keyboard" alt="coverage">
+  </a>
+</p>
+
+## 🚀 Demo
+
+[https://simple-keyboard.com/demo](https://simple-keyboard.com/demo)
 
 ## 📦 Installation & Usage
 Check out the [Getting Started](https://simple-keyboard.com/react/getting-started) docs to begin.
@@ -18,10 +36,6 @@ Check out the [Getting Started](https://simple-keyboard.com/react/getting-starte
 Check out the [simple-keyboard documentation](https://simple-keyboard.com/react/documentation) site.
 
 Feel free to browse the [Q&A / Use-cases](https://simple-keyboard.com/react/qa-use-cases/) page for advanced use-cases.
-
-## 🚀 Demo
-
-[https://simple-keyboard.com/demo](https://simple-keyboard.com/demo)
 
 ### To run demo on your own computer
 
