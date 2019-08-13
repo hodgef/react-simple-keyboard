@@ -25,6 +25,8 @@
   </a>
 </p>
 
+> The slick virtual keyboard for React. Customizable, responsive and lightweight.
+
 ## 🚀 Demo
 
 [https://simple-keyboard.com/demo](https://simple-keyboard.com/demo)
