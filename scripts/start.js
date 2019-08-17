@@ -139,7 +139,9 @@ checkBrowsers(paths.appPath, isInteractive)
           stats = stats.toJson();
       
           if (stats.errors && stats.errors.length > 0) {
-              return;
+            devServer.close();
+            process.exit(1);
+            return;
           }
   
           console.warn("App started in test mode. Closing in 5 seconds.");
