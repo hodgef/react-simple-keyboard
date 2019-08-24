@@ -57,7 +57,7 @@
     "copy-webpack-plugin": "^5.0.3",
     "css-loader": "3.2.0",
     "dotenv": "8.1.0",
-    "dotenv-expand": "4.2.0",
+    "dotenv-expand": "5.1.0",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.12.1",
     "eslint": "^6.1.0",
