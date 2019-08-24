@@ -55,7 +55,7 @@
     "camelcase": "^5.2.0",
     "case-sensitive-paths-webpack-plugin": "2.2.0",
     "copy-webpack-plugin": "^5.0.3",
-    "css-loader": "2.1.1",
+    "css-loader": "3.2.0",
     "dotenv": "6.2.0",
     "dotenv-expand": "4.2.0",
     "enzyme": "^3.9.0",
