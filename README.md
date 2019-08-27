@@ -6,6 +6,10 @@
   <a href="https://www.npmjs.com/package/react-simple-keyboard">
     <img src="https://badgen.net/npm/v/react-simple-keyboard?color=blue" alt="npm version">
   </a>
+  
+  <a href="https://actions-badge.atrox.dev/hodgef/react-simple-keyboard/goto">
+     <img alt="Build Status" src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fhodgef%2Freact-simple-keyboard%2Fbadge&style=flat" />
+  </a>
 
   <a href="https://bundlephobia.com/result?p=react-simple-keyboard">
     <img src="https://badgen.net/bundlephobia/minzip/react-simple-keyboard/?color=green" alt="install size">
