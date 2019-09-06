@@ -16,82 +16,104 @@ it('Keyboard renders without crashing', () => {
 it('Keyboard props duly set through setOptions', () => {
   setDOM("container");
 
-  const props = {};
-  const wrapper = mount(<Keyboard {...props} />, { attachTo: document.body.firstChild });
+  let keyboard;
+  let props = {
+    keyboardRef: r => keyboard = r
+  };
+  let wrapper = mount(<Keyboard {...props} />, { attachTo: document.body.firstChild });
 
   wrapper.setProps({
     maxLength: 5
   });
 
-  expect(wrapper.instance().keyboard.options.maxLength).toBe(5);
+  expect(keyboard.options.maxLength).toBe(5);
 });
 
 it('Keyboard getInput, setInput, clearInput will work', () => {
   setDOM("container");
 
-  const props = {};
-  const wrapper = mount(<Keyboard {...props} />, { attachTo: document.body.firstChild });
+  let keyboard;
+  let props = {
+    keyboardRef: r => keyboard = r
+  };
+  mount(<Keyboard {...props} />, { attachTo: document.body.firstChild });
 
-  wrapper.instance().keyboard.setInput("test");
-  expect(wrapper.instance().keyboard.getInput()).toBe("test");
+  keyboard.setInput("test");
+  expect(keyboard.getInput()).toBe("test");
 
-  wrapper.instance().keyboard.clearInput();
-  expect(wrapper.instance().keyboard.getInput()).toBeFalsy();
+  keyboard.clearInput();
+  expect(keyboard.getInput()).toBeFalsy();
 });
 
 it('Keyboard getInput will work with param', () => {
   setDOM("container");
 
-  const props = {};
-  const wrapper = mount(<Keyboard {...props} />, { attachTo: document.body.firstChild });
+  let keyboard;
+  let props = {
+    keyboardRef: r => keyboard = r
+  };
+  mount(<Keyboard {...props} />, { attachTo: document.body.firstChild });
 
-
-  wrapper.instance().keyboard.setInput("testy", "testIpt");
-  expect(wrapper.instance().keyboard.getInput("testIpt")).toBe("testy");
+  keyboard.setInput("testy", "testIpt");
+  expect(keyboard.getInput("testIpt")).toBe("testy");
 });
 
 it('Keyboard onKeyPress will work', () => {
   setDOM("container");
 
   let pressed = false;
-  const props = { onKeyPress: () => { pressed = true } };
-  const wrapper = mount(<Keyboard {...props} />, { attachTo: document.body.firstChild });
+  let props = {
+    keyboardRef: r => keyboard = r,
+    onKeyPress: () => { pressed = true }
+  };
+  let keyboard;
+  mount(<Keyboard {...props} />, { attachTo: document.body.firstChild });
 
-  wrapper.instance().keyboard.getButtonElement("q").onclick();
+  keyboard.getButtonElement("q").onclick();
   expect(pressed).toBeTruthy();
 });
 
 it('Keyboard onKeyPress will work without onKeyPress prop', () => {
   setDOM("container");
 
-  const props = { debug: true };
-  const wrapper = mount(<Keyboard {...props} />, { attachTo: document.body.firstChild });
+  let props = {
+    keyboardRef: r => keyboard = r,
+    debug: true
+  };
+  let keyboard;
+  mount(<Keyboard {...props} />, { attachTo: document.body.firstChild });
 
-  wrapper.instance().keyboard.getButtonElement("q").onclick();
+  keyboard.getButtonElement("q").onclick();
 });
 
 it('Keyboard onChange will work', () => {
   setDOM("container");
 
   let changed = false;
-  const props = {
+  let props = {
+    keyboardRef: r => keyboard = r,
     onChange: () => {
       changed = true;
     }
   };
-  const wrapper = mount(<Keyboard {...props} />, { attachTo: document.body.firstChild });
+  
+  let keyboard;
+  mount(<Keyboard {...props} />, { attachTo: document.body.firstChild });
 
-  wrapper.instance().keyboard.getButtonElement("q").onclick();
+  keyboard.getButtonElement("q").onclick();
   expect(changed).toBeTruthy();
 });
 
 it('Keyboard onChange will work without onChange prop', () => {
   setDOM("container");
 
-  const props = {};
-  const wrapper = mount(<Keyboard {...props} />, { attachTo: document.body.firstChild });
+  let props = {
+    keyboardRef: r => keyboard = r,
+  };
+  let keyboard;
+  mount(<Keyboard {...props} />, { attachTo: document.body.firstChild });
 
-  wrapper.instance().keyboard.getButtonElement("q").onclick();
+  keyboard.getButtonElement("q").onclick();
 });
 
 it('Keyboard onChangeAll will work', () => {
@@ -99,13 +121,16 @@ it('Keyboard onChangeAll will work', () => {
 
   let changed = false;
 
-  const wrapper = mount(<Keyboard
-    onChangeAll={() => {
+  let props = {
+    keyboardRef: r => keyboard = r,
+    onChangeAll: () => {
       changed = true;
-    }}
-  />, { attachTo: document.body.firstChild });
+    }
+  };
+  let keyboard;
+  mount(<Keyboard {...props} />, { attachTo: document.body.firstChild });
 
-  wrapper.instance().keyboard.getButtonElement("q").onclick();
+  keyboard.getButtonElement("q").onclick();
 
   expect(changed).toBeTruthy();
 });
@@ -115,13 +140,16 @@ it('Keyboard will have default theme', () => {
 
   let changed = false;
 
-  const wrapper = mount(<Keyboard
-    onChangeAll={() => {
+  let props = {
+    keyboardRef: r => keyboard = r,
+    onChangeAll: () => {
       changed = true;
-    }}
-  />, { attachTo: document.body.firstChild });
+    }
+  };
+  let keyboard;
+  mount(<Keyboard {...props} />, { attachTo: document.body.firstChild });
 
-  wrapper.instance().keyboard.getButtonElement("q").onclick();
+  keyboard.getButtonElement("q").onclick();
 
   expect(changed).toBeTruthy();
 });

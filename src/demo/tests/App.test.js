@@ -10,7 +10,7 @@ import App from '../App';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-const keyboard = (wrapper) => wrapper.instance().keyboardRef.keyboard;
+const keyboard = (wrapper) => wrapper.instance().keyboard;
 
 it('Demo will load', () => {
   setDOM();

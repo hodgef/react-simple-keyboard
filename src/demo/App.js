@@ -39,7 +39,7 @@ class App extends Component {
     const input = event.target.value;
 
     this.setState({ input: event.target.value }, () =>
-      this.keyboardRef.keyboard.setInput(input)
+      this.keyboard.setInput(input)
     );
   };
 
@@ -50,6 +50,7 @@ class App extends Component {
       onChange,
       onKeyPress
     } = this;
+    
     return (
       <div className="demoPage">
         <div className="screenContainer">
@@ -61,7 +62,7 @@ class App extends Component {
         </div>
         <Keyboard
           stateToIgnore={input}
-          ref={r => (this.keyboardRef = r)}
+          keyboardRef={r => (this.keyboard = r)}
           onChange={onChange}
           onKeyPress={onKeyPress}
           layoutName={layoutName}

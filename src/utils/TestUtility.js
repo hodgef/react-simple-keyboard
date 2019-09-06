@@ -4,7 +4,7 @@ export const setDOM = (divClass, divID) => {
   clearDOM()
 
   const div = document.createElement('div');
-  div.className += divClass || 'simple-keyboard';
+  div.className += divClass || 'react-simple-keyboard';
 
   if (divID)
     div.setAttribute('id', divID);

@@ -1,39 +1,36 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
+import React, { useEffect, useRef } from "react";
 import Keyboard from "simple-keyboard";
-import { parseProps } from "../services/Utilities";
+import { parseProps, propsChanged } from "../services/Utilities";
 import "simple-keyboard/build/css/index.css";
 
-class KeyboardReact extends Component {
-  baseClassDefault = "react-simple-keyboard";
+function KeyboardReact(props = {}) {
+  const cssClass = props.baseClass || "react-simple-keyboard";
+  const initRef = useRef();
+  const keyboardRef = useRef();
+  const previousProps = useRef(props);
 
-  componentDidMount = () => {
-    const { props, getCssBaseClass } = this;
-    const cssClass = getCssBaseClass();
+  useEffect(() => {
+    if (!initRef.current) {
+      initRef.current = true;
+      props.debug && console.log("ReactSimpleKeyboard: Init");
 
-    this.keyboard = new Keyboard(`.${cssClass}`, {
-      ...parseProps(props)
-    });
-  };
+      keyboardRef.current = new Keyboard(`.${cssClass}`, parseProps(props));
+      props.keyboardRef && props.keyboardRef(keyboardRef.current);
+    }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    if (this.props.stateToIgnore !== nextProps.stateToIgnore) return false;
-    else return true;
-  }
+    /**
+     * Only trigger re-render if props changed
+     */
+    if (propsChanged(previousProps.current, props)) {
+      let keyboard = keyboardRef.current;
+      previousProps.current = props;
 
-  componentWillReceiveProps = nextProps =>
-    this.keyboard.setOptions(parseProps(nextProps));
+      keyboard.setOptions(parseProps(props));
+      props.debug && console.log("ReactSimpleKeyboard: Rendered");
+    }
+  }, [initRef, cssClass, previousProps, props]);
 
-  getCssBaseClass = () => this.props.baseClass || this.baseClassDefault;
-
-  render() {
-    const { getCssBaseClass } = this;
-    return <div className={`${getCssBaseClass()}`} />;
-  }
+  return <div className={cssClass} />;
 }
-
-KeyboardReact.propTypes = {
-  stateToIgnore: PropTypes.any
-};
 
 export default KeyboardReact;
