@@ -1,6 +1,6 @@
 {
   "name": "react-simple-keyboard",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "React.js Virtual Keyboard",
   "main": "build/index.js",
   "types": "build/index.d.ts",
@@ -105,6 +105,10 @@
     "webpack-dev-server": "3.8.0",
     "webpack-manifest-plugin": "2.0.4",
     "workbox-webpack-plugin": "4.3.1"
+  },
+  "peerDependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -162,6 +162,10 @@ module.exports = function(webpackEnv) {
         ? 'source-map'
         : false
       : isEnvDevelopment && 'cheap-module-source-map',
+    externals: {
+      'react': 'react',
+      'react-dom' : 'reactDOM'
+    },
     // These are the "entry points" to our application.
     // This means they will be the "root" imports that are included in JS bundle.
     entry: isEnvProduction ? [paths.appLibIndexJs] : [
