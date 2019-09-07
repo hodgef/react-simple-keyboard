@@ -3,7 +3,7 @@ import Keyboard from "simple-keyboard";
 import { parseProps, propsChanged } from "../services/Utilities";
 import "simple-keyboard/build/css/index.css";
 
-function KeyboardReact(props = {}) {
+function KeyboardReact(props) {
   const cssClass = props.baseClass || "react-simple-keyboard";
   const initRef = useRef();
   const keyboardRef = useRef();
