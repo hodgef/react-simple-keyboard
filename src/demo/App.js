@@ -50,7 +50,7 @@ class App extends Component {
       onChange,
       onKeyPress
     } = this;
-    
+
     return (
       <div className="demoPage">
         <div className="screenContainer">
