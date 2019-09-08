@@ -1,10 +1,8 @@
-import React, { Component } from "react";
-
+import React from "react";
 import Keyboard from "../lib";
-
 import "./css/App.css";
 
-class App extends Component {
+class App extends React.Component {
   state = {
     input: "",
     layoutName: "default",
