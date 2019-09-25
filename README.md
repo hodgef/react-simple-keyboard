@@ -65,7 +65,7 @@ Feel free to browse the [Q&A / Use-cases](https://simple-keyboard.com/react/qa-u
 PR's and issues are welcome. Feel free to submit any issues you have at:
 [https://github.com/hodgef/react-simple-keyboard/issues](https://github.com/hodgef/react-simple-keyboard/issues)
 
-## :dart: Compatibility notice
+## :dart: Compatibility
 
 > Simple-keyboard is intended for modern, standards-compliant browsers.
 > Internet Explorer is sadly not one of them, and since it's market-share is negligible (~2% for IE11), resources won't be spent in trying to support it.
