@@ -88,7 +88,7 @@
     "postcss-safe-parser": "4.0.1",
     "prettier": "^1.17.0",
     "prettier-webpack-plugin": "^1.2.0",
-    "react": "^16.9.0",
+    "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-app-polyfill": "^1.0.2",
     "react-dev-utils": "^9.0.3",
@@ -108,7 +108,7 @@
     "workbox-webpack-plugin": "4.3.1"
   },
   "peerDependencies": {
-    "react": "^16.9.0",
+    "react": "^16.11.0",
     "react-dom": "^16.11.0"
   },
   "eslintConfig": {
