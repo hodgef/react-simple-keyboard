@@ -40,7 +40,7 @@ Check out the [Getting Started](https://simple-keyboard.com/react/getting-starte
 ## 📖 Documentation
 Check out the [simple-keyboard documentation](https://simple-keyboard.com/react/documentation) site.
 
-Feel free to browse the [Q&A / Use-cases](https://simple-keyboard.com/react/qa-use-cases/) page for advanced use-cases.
+Feel free to browse the [Questions & Answers](https://simple-keyboard.com/qa-use-cases/) page for common use-cases.
 
 ### To run demo on your own computer
 
