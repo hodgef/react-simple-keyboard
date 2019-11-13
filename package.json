@@ -96,7 +96,7 @@
     "resolve-url-loader": "3.1.1",
     "sass-loader": "7.3.1",
     "semver": "6.3.0",
-    "simple-keyboard": "^2.27.2",
+    "simple-keyboard": "^2.27.3",
     "style-loader": "1.0.0",
     "terser-webpack-plugin": "2.2.1",
     "ts-pnp": "1.1.5",
