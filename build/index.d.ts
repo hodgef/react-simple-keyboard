@@ -180,11 +180,10 @@ declare module 'react-simple-keyboard' {
     onChangeAll?: (inputs: any) => any;
   }
   
-  class KeyboardReact {
+  class KeyboardReact extends React.Component<KeyboardOptions> {
     /**
      * Keyboard instance
      */
-    constructor(selector: string, options: KeyboardOptions);
     constructor(options: KeyboardOptions);
 
     /**
@@ -219,20 +218,20 @@ declare module 'react-simple-keyboard' {
     /**
      * Clear the keyboard's input.
      *
-     * @param {string} [inputName] optional - the internal input to select
+     * @param {string} [inputName] optional - the internal input to select.
      */
     clearInput(inputName?: string): void;
 
     /**
      * Get the keyboard’s input (You can also get it from the onChange prop).
-     * @param  {string} [inputName] optional - the internal input to select
+     * @param  {string} [inputName] optional - the internal input to select.
      */
     getInput(inputName?: string): string;
 
     /**
      * Set the keyboard’s input.
      * @param  {string} input the input value
-     * @param  {string} inputName optional - the internal input to select
+     * @param  {string} inputName optional - the internal input to select.
      */
     setInput(input: string, inputName?: string): void;
 
@@ -250,7 +249,7 @@ declare module 'react-simple-keyboard' {
 
     /**
      * Get the DOM Element of a button. If there are several buttons with the same name, an array of the DOM Elements is returned.
-     * @param  {string} button The button layout name to select
+     * @param  {string} button The button layout name to select.
      */
     getButtonElement(button: string): HTMLElement | HTMLElement[];
 
@@ -258,18 +257,7 @@ declare module 'react-simple-keyboard' {
      * Clears keyboard listeners and DOM elements.
      */
     destroy(): void;
-
-    /**
-     * React
-     */
-    render(): React.ReactType;
-    props: any;
-    context: any;
-    setState: any;
-    forceUpdate: any;
-    state: any;
-    refs: any;
   }
-
+  
   export default KeyboardReact;
 }
