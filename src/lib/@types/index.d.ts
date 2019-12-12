@@ -180,11 +180,10 @@ declare module 'react-simple-keyboard' {
     onChangeAll?: (inputs: any) => any;
   }
   
-  class KeyboardReact {
+  class KeyboardReact extends React.Component<KeyboardOptions> {
     /**
      * Keyboard instance
      */
-    constructor(selector: string, options: KeyboardOptions);
     constructor(options: KeyboardOptions);
 
     /**
