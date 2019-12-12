@@ -257,17 +257,6 @@ declare module 'react-simple-keyboard' {
      * Clears keyboard listeners and DOM elements.
      */
     destroy(): void;
-
-    /**
-     * React
-     */
-    render(): React.ReactType;
-    props: any;
-    context: any;
-    setState: any;
-    forceUpdate: any;
-    state: any;
-    refs: any;
   }
 
   export default KeyboardReact;
