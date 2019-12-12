@@ -22,20 +22,3 @@ jobs:
         npm run coverage
       env:
         CI: true
-        
-    - name: Discord notification
-      if: success()
-      env:
-        DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-      uses: Ilshidur/action-discord@master
-      with:
-        args: 'react-simple-keyboard - CI Build Passed'
-        
-    - name: Discord notification
-      if: failure()
-      env:
-        DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-      uses: Ilshidur/action-discord@master
-      with:
-        args: 'react-simple-keyboard - CI Build Failed'
-        
