@@ -18,6 +18,10 @@ declare module 'react-simple-keyboard' {
 
   interface KeyboardOptions {
     /**
+    * Sets a personalized unique id
+    */
+    baseClass?: string;
+    /**
      * Modify the keyboard layout.
      */
     layout?: KeyboardLayoutObject;
