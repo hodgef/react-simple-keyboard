@@ -21,6 +21,7 @@ declare module 'react-simple-keyboard' {
     * Sets a personalized unique id
     */
     baseClass?: string;
+    
     /**
      * Modify the keyboard layout.
      */
