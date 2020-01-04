@@ -145,6 +145,11 @@ declare module 'react-simple-keyboard' {
     disableButtonHold?: boolean;
 
     /**
+     * keyboardRef
+     */
+		keyboardRef: (r: any) => void
+
+    /**
      * Executes the callback function on key press. Returns button layout name (i.e.: "{shift}").
      */
     onKeyPress?: (button: string) => any;
