@@ -209,7 +209,7 @@ declare module 'react-simple-keyboard' {
     /**
      * DOM Element
      */
-    keyboardDOM: HTMLElement;
+    keyboardDOM?: HTMLElement;
     
     /**
      * Adds/Modifies an entry to the `buttonTheme`. Basically a way to add a class to a button.
