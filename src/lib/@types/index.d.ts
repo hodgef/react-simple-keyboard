@@ -205,7 +205,12 @@ declare module 'react-simple-keyboard' {
      * caretPosition
      */
     caretPosition?: number;
-
+    
+    /**
+     * DOM Element
+     */
+    keyboardDOM: HTMLElement;
+    
     /**
      * Adds/Modifies an entry to the `buttonTheme`. Basically a way to add a class to a button.
      * @param  {string} buttons List of buttons to select (separated by a space).
