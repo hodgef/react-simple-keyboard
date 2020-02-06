@@ -147,7 +147,7 @@ declare module 'react-simple-keyboard' {
     /**
      * keyboardRef
      */
-    keyboardRef: (r: any) => void;
+    keyboardRef?: (r: any) => void;
 
     /**
      * Executes the callback function on key press. Returns button layout name (i.e.: "{shift}").
