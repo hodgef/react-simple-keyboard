@@ -1,8 +1,10 @@
-<p>
-  <a href="https://simple-keyboard.com/demo">
-	<img alt="simple-keyboard: Javscript Virtual Keyboard" src="https://i.imgur.com/ay03Uw4.png">
-  </a>
+<a href="https://simple-keyboard.com/demo">
+    <img alt="simple-keyboard: Javscript Virtual Keyboard" src="https://i.imgur.com/ay03Uw4.png">
+</a>
 
+<blockquote>The slick virtual keyboard for React. Customizable, responsive and lightweight.</blockquote>
+
+<p>
   <a href="https://www.npmjs.com/package/react-simple-keyboard">
     <img src="https://badgen.net/npm/v/react-simple-keyboard?color=blue" alt="npm version">
   </a>
@@ -27,8 +29,6 @@
     <img src="https://badgen.net/codecov/c/github/hodgef/react-simple-keyboard" alt="coverage">
   </a>
 </p>
-
-> The slick virtual keyboard for React. Customizable, responsive and lightweight.
 
 ## 🚀 Demo
 
