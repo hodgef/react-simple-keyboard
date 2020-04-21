@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import Keyboard from "simple-keyboard";
-import { parseProps, propsChanged } from "../services/Utilities";
+import { parseProps, changedProps } from "../services/Utilities";
 import "simple-keyboard/build/css/index.css";
 
 const KeyboardReact = props => {
@@ -20,14 +20,20 @@ const KeyboardReact = props => {
       props.keyboardRef && props.keyboardRef(keyboardRef.current);
     }
 
+    const updatedProps = changedProps(previousProps.current, props);
+
     /**
      * Only trigger render if props changed
      */
-    if (propsChanged(previousProps.current, props)) {
+    if (updatedProps.length) {
       let keyboard = keyboardRef.current;
       previousProps.current = props;
       keyboard.setOptions(parseProps(props));
-      props.debug && console.log("ReactSimpleKeyboard: Rendered");
+      props.debug &&
+        console.log(
+          "ReactSimpleKeyboard - Re-render due to updated props:",
+          updatedProps
+        );
     }
   }, [initRef, cssClass, previousProps, props]);
 

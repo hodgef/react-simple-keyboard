@@ -3,12 +3,17 @@ export const parseProps = props => ({
   theme: `simple-keyboard ${props.theme || "hg-theme-default"}`
 });
 
-export const propsChanged = (prevProps, props) => {
-  const cleanProps = sourceObj =>
-    JSON.stringify({
-      ...sourceObj,
-      stateToIgnore: null
-    });
+const cleanProps = sourceObj => ({
+  ...sourceObj,
+  keyboardRef: null,
+  stateToIgnore: null
+});
 
-  return cleanProps(props) !== cleanProps(prevProps);
+export const changedProps = (prevProps, props) => {
+  const cleanedProps = cleanProps(props);
+  const cleanedPrevProps = cleanProps(prevProps);
+
+  return Object.keys(cleanedProps).filter(
+    propName => cleanedProps[propName] !== cleanedPrevProps[propName]
+  );
 };
