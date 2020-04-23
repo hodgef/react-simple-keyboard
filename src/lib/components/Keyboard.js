@@ -10,28 +10,30 @@ const KeyboardReact = props => {
   const previousProps = useRef(props);
 
   useEffect(() => {
+    const parsedProps = parseProps(props);
+
     /**
      * Initialize simple-keyboard
      */
     if (!initRef.current) {
       initRef.current = true;
-      props.debug && console.log("ReactSimpleKeyboard: Init");
-      keyboardRef.current = new Keyboard(`.${cssClass}`, parseProps(props));
-      props.keyboardRef && props.keyboardRef(keyboardRef.current);
+      parsedProps.debug && console.log("ReactSimpleKeyboard: Init");
+      keyboardRef.current = new Keyboard(`.${cssClass}`, parsedProps);
+      parsedProps.keyboardRef && parsedProps.keyboardRef(keyboardRef.current);
     }
 
-    const updatedProps = changedProps(previousProps.current, props);
+    const updatedProps = changedProps(previousProps.current, parsedProps);
 
     /**
      * Only trigger render if props changed
      */
     if (updatedProps.length) {
       let keyboard = keyboardRef.current;
-      previousProps.current = props;
-      keyboard.setOptions(parseProps(props));
-      props.debug &&
+      previousProps.current = parsedProps;
+      keyboard.setOptions(parsedProps);
+      parsedProps.debug &&
         console.log(
-          "ReactSimpleKeyboard - Re-render due to updated props:",
+          "ReactSimpleKeyboard - setOptions called due to updated props:",
           updatedProps
         );
     }
