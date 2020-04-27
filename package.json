@@ -97,7 +97,7 @@
     "sass-loader": "8.0.2",
     "semver": "7.3.2",
     "simple-keyboard": "^2.29.2",
-    "style-loader": "1.1.4",
+    "style-loader": "1.2.0",
     "terser-webpack-plugin": "2.3.5",
     "ts-pnp": "1.2.0",
     "uglifyjs-webpack-plugin": "^2.1.2",
