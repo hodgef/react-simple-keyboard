@@ -55,9 +55,9 @@ Feel free to browse the [Questions & Answers](https://simple-keyboard.com/qa-use
 * [Angular](https://simple-keyboard.com/demo)
 * [Vue.js](https://simple-keyboard.com/demo)
 
-### Questions?
+### Questions? Join the chat
 
-<a href="http://franciscohodge.com/simple-keyboard/chat/join" title="Join our Discord chat" target="_blank"><img src="https://franciscohodge.com/project-pages/simple-keyboard/images/discord.png" align="center" width="200"></a>
+<a href="https://discordapp.com/invite/SJexsCG" title="Join our Discord chat" target="_blank"><img src="https://i.imgur.com/lCfbZwg.png" align="center" width="200"></a>
 
 ## :dart: Compatibility
 
