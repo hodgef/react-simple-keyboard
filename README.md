@@ -30,14 +30,14 @@
   </a>
 </p>
 
-## 🚀 Demo
+## Demo 🚀 
 
 [https://simple-keyboard.com/demo](https://simple-keyboard.com/demo)
 
-## 📦 Installation & Usage
+## Installation & Usage 📦 
 Check out the [Getting Started](https://simple-keyboard.com/react/getting-started) docs to begin.
 
-## 📖 Documentation
+## Documentation 📖 
 Check out the [simple-keyboard documentation](https://simple-keyboard.com/react/documentation) site.
 
 Feel free to browse the [Questions & Answers](https://simple-keyboard.com/qa-use-cases/) page for common use-cases.
@@ -57,9 +57,9 @@ Feel free to browse the [Questions & Answers](https://simple-keyboard.com/qa-use
 
 ### Questions? Join the chat
 
-<a href="https://discordapp.com/invite/SJexsCG" title="Join our Discord chat" target="_blank"><img src="https://i.imgur.com/lCfbZwg.png" align="center" width="200"></a>
+<a href="https://discordapp.com/invite/SJexsCG" title="Join our Discord chat" target="_blank"><img src="https://discordapp.com/api/guilds/498978399801573396/widget.png?style=banner2" align="center"></a>
 
-## :dart: Compatibility
+## Compatibility 🎯 
 
 > Simple-keyboard is intended for modern, standards-compliant browsers.
 > Internet Explorer is sadly not one of them, and since its market-share is negligible (~2% for IE11), resources won't be spent in trying to support it.
@@ -67,7 +67,7 @@ Feel free to browse the [Questions & Answers](https://simple-keyboard.com/qa-use
 > To learn more about the rationale for not supporting IE, check out [this link](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-perils-of-using-Internet-Explorer-as-your-default-browser/ba-p/331732).
 
 
-## ✅ Contributing
+## Contributing ✅ 
 
 PR's and issues are welcome. Feel free to submit any issues you have at:
 [https://github.com/hodgef/react-simple-keyboard/issues](https://github.com/hodgef/react-simple-keyboard/issues)
