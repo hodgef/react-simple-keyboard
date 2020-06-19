@@ -14,7 +14,7 @@ declare module 'react-simple-keyboard' {
     buttons: string;
   }
 
-  interface KeyboardOptions {
+  export interface KeyboardOptions {
     /**
     * Sets a personalized unique id
     */
@@ -186,6 +186,16 @@ declare module 'react-simple-keyboard' {
      * Executes the callback function on input change. Returns the input object with all defined inputs.
      */
     onChangeAll?: (inputs: any) => any;
+
+    /**
+     * Module classes to be loaded by simple-keyboard.
+     */
+    modules?: any[];
+
+    /**
+     * Module options can have any format
+     */
+    [name: string]: any;
   }
   
   class KeyboardReact extends React.Component<KeyboardOptions> {
