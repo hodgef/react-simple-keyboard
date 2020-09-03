@@ -218,6 +218,28 @@ declare module 'react-simple-keyboard' {
      * caretPosition
      */
     caretPosition?: number;
+
+    /**
+     * caretPositionEnd
+     */
+    caretPositionEnd?: number;
+
+    /**
+     * Changes the internal caret position
+     * @param {number} position The caret's start position
+     * @param {number} positionEnd The caret's end position
+     */
+    setCaretPosition(position: number, positionEnd?: number): void;
+
+    /**
+     * Retrieves the internal caret position
+     */
+    getCaretPosition(): number;
+
+    /**
+     * Retrieves the internal end caret position
+     */
+    getCaretPositionEnd(): number;
     
     /**
      * DOM Element

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import Keyboard from "simple-keyboard";
 import { parseProps, changedProps } from "../services/Utilities";
+import PropTypes from "prop-types";
 import "simple-keyboard/build/css/index.css";
 
 const KeyboardReact = props => {
@@ -28,7 +29,7 @@ const KeyboardReact = props => {
      * Only trigger render if props changed
      */
     if (updatedProps.length) {
-      let keyboard = keyboardRef.current;
+      const keyboard = keyboardRef.current;
       previousProps.current = parsedProps;
       keyboard.setOptions(parsedProps);
       parsedProps.debug &&
@@ -40,6 +41,10 @@ const KeyboardReact = props => {
   }, [initRef, cssClass, previousProps, props]);
 
   return <div className={cssClass} />;
+};
+
+KeyboardReact.propTypes = {
+  baseClass: PropTypes.string
 };
 
 export default KeyboardReact;
