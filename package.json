@@ -96,7 +96,7 @@
     "react-dom": "^16.13.1",
     "resolve": "1.17.0",
     "resolve-url-loader": "3.1.1",
-    "sass-loader": "10.0.1",
+    "sass-loader": "10.0.2",
     "semver": "7.3.2",
     "simple-keyboard": "^2.30.1",
     "style-loader": "1.2.1",
