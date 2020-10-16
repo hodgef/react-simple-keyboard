@@ -143,6 +143,11 @@ declare module 'react-simple-keyboard' {
     disableButtonHold?: boolean;
 
     /**
+     * Adds unicode right-to-left control characters to input return values.
+     */
+    rtl?: boolean;
+
+    /**
      * keyboardRef
      */
     keyboardRef?: (r: any) => void;
