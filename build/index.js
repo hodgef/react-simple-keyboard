@@ -1,6 +1,6 @@
 /*!
  * 
- *   react-simple-keyboard v2.5.73
+ *   react-simple-keyboard v2.5.74
  *   https://github.com/hodgef/react-simple-keyboard
  * 
  *   Copyright (c) Francisco Hodge (https://github.com/hodgef)
