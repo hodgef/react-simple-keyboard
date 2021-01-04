@@ -30,43 +30,45 @@
   </a>
 </p>
 
-## Demo 🚀 
+## Demo 🚀
 
 [https://simple-keyboard.com/demo](https://simple-keyboard.com/demo)
 
-## Installation & Usage 📦 
+## Installation & Usage 📦
+
 Check out the [Getting Started](https://simple-keyboard.com/react/getting-started) docs to begin.
 
-## Documentation 📖 
+## Documentation 📖
+
 Check out the [simple-keyboard documentation](https://simple-keyboard.com/react/documentation) site.
 
 Feel free to browse the [Questions & Answers](https://simple-keyboard.com/qa-use-cases/) page for common use-cases.
 
 ### To run demo on your own computer
 
-* Clone this repository
-* `npm install`
-* `npm start`
-* Visit [http://localhost:3000/](http://localhost:3000/)
+- Clone this repository
+- `npm install`
+- `npm start`
+- Visit [http://localhost:3000/](http://localhost:3000/)
 
 ### Other versions
 
-* [Vanilla JS](https://github.com/hodgef/simple-keyboard)
-* [Angular](https://simple-keyboard.com/demo)
-* [Vue.js](https://simple-keyboard.com/demo)
+- [Vanilla JS](https://github.com/hodgef/simple-keyboard)
+- [Angular](https://simple-keyboard.com/demo)
+- [Vue.js](https://simple-keyboard.com/demo)
 
 ### Questions? Join the chat
 
 <a href="https://discordapp.com/invite/SJexsCG" title="Join our Discord chat" target="_blank"><img src="https://discordapp.com/api/guilds/498978399801573396/widget.png?style=banner2" align="center"></a>
 
-## Compatibility 🎯 
+## Compatibility 🎯
 
 > Simple-keyboard is intended for modern, standards-compliant browsers.
 > Internet Explorer is sadly not one of them, and since its market-share is negligible (~2% for IE11), resources won't be spent in trying to support it.
 >
 > For more information, check out [this Q&A entry](https://hodgef.com/simple-keyboard/questions-answers/internet-explorer-not-supported/).
 
-## Contributing ✅ 
+## Contributing ✅
 
-PR's and issues are welcome. Feel free to submit any issues you have at:
+PRs and issues are welcome. Feel free to submit any issues you have at:
 [https://github.com/hodgef/react-simple-keyboard/issues](https://github.com/hodgef/react-simple-keyboard/issues)
