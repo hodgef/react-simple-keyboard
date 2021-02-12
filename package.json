@@ -94,7 +94,7 @@
     "react-app-polyfill": "^2.0.0",
     "react-dev-utils": "^11.0.2",
     "react-dom": "^16.14.0 || ^17.0.0",
-    "resolve": "1.19.0",
+    "resolve": "1.20.0",
     "resolve-url-loader": "3.1.2",
     "sass-loader": "10.1.1",
     "semver": "7.3.4",
