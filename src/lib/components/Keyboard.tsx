@@ -1,16 +1,16 @@
-import React, { useEffect, useRef } from "react";
+import * as React from "react";
 import Keyboard from "simple-keyboard";
 import { parseProps, changedProps } from "../services/Utilities";
-import PropTypes from "prop-types";
 import "simple-keyboard/build/css/index.css";
+import { KeyboardReactInterface } from "../interfaces";
 
-const KeyboardReact = props => {
+const KeyboardReact = (props: KeyboardReactInterface["options"]) => {
   const cssClass = props.baseClass || "react-simple-keyboard";
-  const initRef = useRef();
-  const keyboardRef = useRef();
-  const previousProps = useRef(props);
+  const initRef = React.useRef(null);
+  const keyboardRef = React.useRef(null);
+  const previousProps = React.useRef(props);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const parsedProps = parseProps(props);
 
     /**
@@ -43,8 +43,5 @@ const KeyboardReact = props => {
   return <div className={cssClass} />;
 };
 
-KeyboardReact.propTypes = {
-  baseClass: PropTypes.string
-};
-
 export default KeyboardReact;
+export { KeyboardReactInterface };

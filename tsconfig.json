@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+      "noImplicitAny": true,
+      "outDir": "build/types",
+      "module": "esnext",
+      "target": "es5",
+      "allowJs": true,
+      "sourceMap": true,
+      "declaration": true,
+      "emitDeclarationOnly": true,
+      "suppressImplicitAnyIndexErrors": true,
+      "lib": ["es2020", "dom"],
+      "moduleResolution": "node",
+      "downlevelIteration": true,
+      "jsx": "react"
+    },
+    "include": ["src/lib"],
+    "exclude": ["src/lib/**/tests"],
+}

@@ -2,7 +2,7 @@
     <img alt="simple-keyboard: Javscript Virtual Keyboard" src="https://i.imgur.com/ay03Uw4.png">
 </a>
 
-<blockquote>The slick virtual keyboard for React. Customizable, responsive and lightweight.</blockquote>
+<blockquote>Virtual Keyboard for React. Customizable, responsive and lightweight.</blockquote>
 
 <p>
   <a href="https://www.npmjs.com/package/react-simple-keyboard">
@@ -63,10 +63,13 @@ Feel free to browse the [Questions & Answers](https://simple-keyboard.com/qa-use
 
 ## Compatibility 🎯
 
-> Simple-keyboard is intended for modern, standards-compliant browsers.
-> Internet Explorer is sadly not one of them, and since its market-share is negligible (~2% for IE11), resources won't be spent in trying to support it.
->
-> For more information, check out [this Q&A entry](https://hodgef.com/simple-keyboard/questions-answers/internet-explorer-not-supported/).
+- Internet Explorer 11
+- Edge (Spartan) 16+
+- Edge (Anaheim/Edge Chromium) 79+
+- Chrome 49+
+- Safari 9+
+- Firefox 57+
+- iOS 9+
 
 ## Contributing ✅
 
