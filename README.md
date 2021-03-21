@@ -1,5 +1,5 @@
 <a href="https://simple-keyboard.com/demo">
-    <img alt="simple-keyboard: Javscript Virtual Keyboard" src="https://i.imgur.com/aqypE3B.png">
+    <img alt="simple-keyboard: Javscript Virtual Keyboard" src="https://i.imgur.com/x1Cppus.png">
 </a>
 
 <blockquote>Virtual Keyboard for React. Customizable, responsive and lightweight.</blockquote>
@@ -23,10 +23,6 @@
   
   <a href="https://david-dm.org/hodgef/react-simple-keyboard">
     <img src="https://badgen.net/david/dep/hodgef/react-simple-keyboard" alt="coverage">
-  </a>
-
-  <a href="https://codecov.io/gh/hodgef/react-simple-keyboard">
-    <img src="https://badgen.net/codecov/c/github/hodgef/react-simple-keyboard" alt="coverage">
   </a>
 </p>
 
