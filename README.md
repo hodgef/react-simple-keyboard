@@ -26,15 +26,15 @@
   </a>
 </p>
 
-## Demo 🚀
+## 🚀 Demo
 
 [https://simple-keyboard.com/demo](https://simple-keyboard.com/demo)
 
-## Installation & Usage 📦
+## 📦 Installation & Usage
 
 Check out the [Getting Started](https://simple-keyboard.com/react/getting-started) docs to begin.
 
-## Documentation 📖
+## 📖 Documentation
 
 Check out the [simple-keyboard documentation](https://simple-keyboard.com/react/documentation) site.
 
@@ -57,7 +57,7 @@ Feel free to browse the [Questions & Answers](https://simple-keyboard.com/qa-use
 
 <a href="https://discordapp.com/invite/SJexsCG" title="Join our Discord chat" target="_blank"><img src="https://discordapp.com/api/guilds/498978399801573396/widget.png?style=banner2" align="center"></a>
 
-## Compatibility 🎯
+## 🎯 Compatibility
 
 - Internet Explorer 11
 - Edge (Spartan) 16+
@@ -67,7 +67,7 @@ Feel free to browse the [Questions & Answers](https://simple-keyboard.com/qa-use
 - Firefox 57+
 - iOS 9+
 
-## Contributing ✅
+## ✅ Contributing
 
 PRs and issues are welcome. Feel free to submit any issues you have at:
 [https://github.com/hodgef/react-simple-keyboard/issues](https://github.com/hodgef/react-simple-keyboard/issues)
