@@ -6,8 +6,10 @@ import { KeyboardReactInterface } from "../interfaces";
 
 const KeyboardReact = (props: KeyboardReactInterface["options"]) => {
   const cssClass = props.baseClass || "react-simple-keyboard";
-  const initRef = React.useRef(null);
-  const keyboardRef = React.useRef(null);
+  const initRef = React.useRef(null) as React.MutableRefObject<null | boolean>;
+  const keyboardRef = React.useRef(
+    null
+  ) as React.MutableRefObject<null | Keyboard>;
   const previousProps = React.useRef(props);
 
   React.useEffect(() => {
@@ -31,7 +33,7 @@ const KeyboardReact = (props: KeyboardReactInterface["options"]) => {
     if (updatedProps.length) {
       const keyboard = keyboardRef.current;
       previousProps.current = parsedProps;
-      keyboard.setOptions(parsedProps);
+      keyboard?.setOptions(parsedProps);
       parsedProps.debug &&
         console.log(
           "ReactSimpleKeyboard - setOptions called due to updated props:",

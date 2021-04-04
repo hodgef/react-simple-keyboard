@@ -5,11 +5,10 @@ export const parseProps = (props: KeyboardReactInterface["options"]) => ({
   theme: `simple-keyboard ${props.theme || "hg-theme-default"}`,
 });
 
-const cleanProps = (sourceObj: KeyboardReactInterface["options"]) =>
-  ({
-    ...sourceObj,
-    keyboardRef: null,
-  } as KeyboardReactInterface["options"]);
+const cleanProps = (sourceObj: KeyboardReactInterface["options"]) => ({
+  ...sourceObj,
+  keyboardRef: null,
+});
 
 export const changedProps = (
   prevProps: KeyboardReactInterface["options"],
