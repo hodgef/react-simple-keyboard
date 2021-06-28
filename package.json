@@ -76,7 +76,7 @@
     "react-dom": "^16.14.0 || ^17.0.0",
     "simple-keyboard": "3.1.53",
     "style-loader": "^3.0.0",
-    "terser-webpack-plugin": "^5.1.3",
+    "terser-webpack-plugin": "^5.1.4",
     "typescript": "^4.3.4",
     "url-loader": "^4.1.1",
     "webpack": "^5.40.0",
