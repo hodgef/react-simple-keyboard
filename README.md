@@ -16,10 +16,6 @@
   <a href="https://github.com/hodgef/react-simple-keyboard/actions">
      <img alt="Publish Status" src="https://github.com/hodgef/react-simple-keyboard/workflows/Publish/badge.svg?color=green" />
   </a>
-
-  <a href="https://bundlephobia.com/result?p=react-simple-keyboard">
-    <img src="https://badgen.net/bundlephobia/minzip/react-simple-keyboard/?color=green" alt="install size">
-  </a>
   
   <a href="https://david-dm.org/hodgef/react-simple-keyboard">
     <img src="https://badgen.net/david/dep/hodgef/react-simple-keyboard" alt="coverage">
