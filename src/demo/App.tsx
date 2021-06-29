@@ -51,7 +51,7 @@ class App extends React.Component {
     return (
       <div className="demoPage">
         <div className="screenContainer">
-          <input
+          <textarea
             className="inputContainer"
             value={input}
             onChange={onChangeInput}

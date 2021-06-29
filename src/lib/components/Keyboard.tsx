@@ -46,4 +46,3 @@ const KeyboardReact = (props: KeyboardReactInterface["options"]) => {
 };
 
 export default KeyboardReact;
-export { KeyboardReactInterface };

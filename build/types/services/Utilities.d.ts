@@ -41,6 +41,8 @@ export declare const parseProps: (props: KeyboardReactInterface["options"]) => {
     layoutCandidatesPageSize?: number | undefined;
     onRender?: ((instance?: import("simple-keyboard/build/types/components/Keyboard").default | undefined) => void) | undefined;
     onInit?: ((instance?: import("simple-keyboard/build/types/components/Keyboard").default | undefined) => void) | undefined;
+    onChange?: ((input: string, e?: MouseEvent | undefined) => any) | undefined;
+    onChangeAll?: ((inputObj: import("simple-keyboard/build/types/interfaces").KeyboardInput, e?: MouseEvent | undefined) => any) | undefined;
     keyboardRef?: ((r: any) => void) | undefined;
 };
 export declare const changedProps: (prevProps: KeyboardReactInterface["options"], props: KeyboardReactInterface["options"]) => string[];

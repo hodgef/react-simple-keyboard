@@ -1,4 +1,4 @@
 import "./polyfills";
-import KeyboardReact, { KeyboardReactInterface } from "./components/Keyboard";
+import KeyboardReact from "./components/Keyboard";
+export * from "./interfaces";
 export default KeyboardReact;
-export { KeyboardReactInterface };
