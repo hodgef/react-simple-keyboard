@@ -74,7 +74,7 @@
     "prettier-webpack-plugin": "^1.2.0",
     "react": "^16.14.0 || ^17.0.0",
     "react-dom": "^16.14.0 || ^17.0.0",
-    "simple-keyboard": "3.2.20",
+    "simple-keyboard": "3.2.22",
     "style-loader": "^3.1.0",
     "terser-webpack-plugin": "^5.1.4",
     "typescript": "^4.3.5",
