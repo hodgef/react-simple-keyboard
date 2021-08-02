@@ -9,6 +9,7 @@ on:
 jobs:
   build:
     runs-on: ${{ matrix.os }}
+    if: ${{ !github.base_ref }}
     strategy:
       matrix:
         node-version: [12.x]
