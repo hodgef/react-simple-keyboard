@@ -1,10 +1,11 @@
 name: Build PR (Standard)
-on: [pull_request]
+
+on: pull_request
 
 jobs:
   build:
     runs-on: ${{ matrix.os }}
-    if: ${{ github.actor != 'dependabot[bot]' && !contains(github.event.pull_request.labels.*.name, 'dependencies') }}
+    if: ${{ !contains(github.event.pull_request.labels.*.name, 'dependencies') }}
     strategy:
       matrix:
         node-version: [12.x]
