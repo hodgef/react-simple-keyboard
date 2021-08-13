@@ -39,3 +39,10 @@ jobs:
               pull_number: pullRequest.number,
               repo: repository.repo,
             })
+      - name: Reject PR
+        if: failure()
+        uses: peter-evans/close-pull@v1
+        with:
+          pull-request-number: ${{github.event.number}}
+          comment: "Closing PR due to failing tests."
+          delete-branch: true
