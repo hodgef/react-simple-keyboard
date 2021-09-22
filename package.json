@@ -54,7 +54,7 @@
     "@types/react-dom": "^17.0.9",
     "@typescript-eslint/eslint-plugin": "^4.31.1",
     "@typescript-eslint/parser": "^4.31.2",
-    "autoprefixer": "^10.3.4",
+    "autoprefixer": "^10.3.5",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.2",
     "babel-preset-minify": "^0.5.0",
