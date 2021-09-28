@@ -52,7 +52,7 @@
     "@types/jest": "^27.0.2",
     "@types/react": "^17.0.24",
     "@types/react-dom": "^17.0.9",
-    "@typescript-eslint/eslint-plugin": "^4.31.1",
+    "@typescript-eslint/eslint-plugin": "^4.32.0",
     "@typescript-eslint/parser": "^4.31.2",
     "autoprefixer": "^10.3.6",
     "babel-eslint": "^10.1.0",
