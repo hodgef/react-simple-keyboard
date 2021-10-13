@@ -16,10 +16,6 @@
   <a href="https://github.com/hodgef/react-simple-keyboard/actions">
      <img alt="Publish Status" src="https://github.com/hodgef/react-simple-keyboard/workflows/Publish/badge.svg?color=green" />
   </a>
-  
-  <a href="https://david-dm.org/hodgef/react-simple-keyboard">
-    <img src="https://badgen.net/david/dep/hodgef/react-simple-keyboard" alt="coverage">
-  </a>
 </p>
 
 ## 🚀 Demo
@@ -62,6 +58,8 @@ Feel free to browse the [Questions & Answers](https://simple-keyboard.com/qa-use
 - Safari 9+
 - Firefox 57+
 - iOS 9+
+
+> Note: If you don't want to support old browsers, you can use the Modern Browsers bundle ([index.modern.js](https://github.com/hodgef/react-simple-keyboard/blob/master/build)).
 
 ## ✅ Contributing
 
