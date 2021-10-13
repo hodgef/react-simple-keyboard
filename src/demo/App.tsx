@@ -1,4 +1,5 @@
 import * as React from "react";
+import SimpleKeyboard from "simple-keyboard";
 import Keyboard from "../lib";
 import "./css/App.css";
 
@@ -8,7 +9,7 @@ class App extends React.Component {
     layoutName: "default",
   };
 
-  keyboard;
+  keyboard: SimpleKeyboard;
 
   onChange = (input) =>
     this.setState({ input }, () => console.log("Input changed", input));
