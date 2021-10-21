@@ -8,8 +8,12 @@
   <a href="https://www.npmjs.com/package/react-simple-keyboard">
     <img src="https://badgen.net/npm/v/react-simple-keyboard?color=blue" alt="npm version">
   </a>
+    
+  <a href="https://github.com/hodgef/react-simple-keyboard">
+    <img src="https://img.shields.io/github/last-commit/hodgef/react-simple-keyboard" alt="lastest commit">
+  </a>
   
-   <a href="https://github.com/hodgef/react-simple-keyboard/actions">
+  <a href="https://github.com/hodgef/react-simple-keyboard/actions">
      <img alt="Build Status" src="https://github.com/hodgef/react-simple-keyboard/workflows/Build/badge.svg?color=green" />
   </a>
   
