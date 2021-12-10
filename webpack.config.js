@@ -5,6 +5,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const getPackageJson = require('./scripts/getPackageJson');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 const {
   version,
@@ -105,6 +106,9 @@ module.exports = {
     new PrettierPlugin(),
     new MiniCssExtractPlugin({
         filename: 'css/index.css'
+    }),
+    new CopyPlugin({
+      patterns: [ { from: "src/lib/interfaces.d.ts" } ],
     }),
     new webpack.BannerPlugin(banner)
   ],

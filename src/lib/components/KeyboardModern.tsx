@@ -3,20 +3,14 @@ import * as React from "react";
 import { parseProps, changedProps } from "../services/Utilities";
 import "simple-keyboard/build/css/index.css";
 import { KeyboardReactInterface } from "../interfaces";
-
-const Keyboard = require("simple-keyboard/build/index.modern").default as {
-  new (
-    selector: string,
-    options: KeyboardReactInterface["options"]
-  ): KeyboardReactInterface["options"];
-};
+import Keyboard from "simple-keyboard/build/index.modern";
 
 const KeyboardReact = (props: KeyboardReactInterface["options"]) => {
   const cssClass = props.baseClass || "react-simple-keyboard";
   const initRef = React.useRef(null) as React.MutableRefObject<null | boolean>;
-  const keyboardRef = React.useRef(null) as React.MutableRefObject<
-    null | KeyboardReactInterface["options"]
-  >;
+  const keyboardRef = React.useRef(
+    null
+  ) as React.MutableRefObject<null | KeyboardReactInterface>;
   const previousProps = React.useRef(props);
 
   React.useEffect(() => {
@@ -28,10 +22,7 @@ const KeyboardReact = (props: KeyboardReactInterface["options"]) => {
     if (!initRef.current) {
       initRef.current = true;
       parsedProps.debug && console.log("ReactSimpleKeyboard: Init");
-      keyboardRef.current = new Keyboard(
-        `.${cssClass}`,
-        parsedProps
-      ) as KeyboardReactInterface["options"];
+      keyboardRef.current = new Keyboard(`.${cssClass}`, parsedProps);
       parsedProps.keyboardRef && parsedProps.keyboardRef(keyboardRef.current);
     }
 

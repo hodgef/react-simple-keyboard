@@ -2,14 +2,14 @@ import * as React from "react";
 import Keyboard from "simple-keyboard";
 import { parseProps, changedProps } from "../services/Utilities";
 import "simple-keyboard/build/css/index.css";
-import { KeyboardReactInterface } from "../interfaces";
+import { KeyboardReactInterface } from "../interfaces.d";
 
 const KeyboardReact = (props: KeyboardReactInterface["options"]) => {
   const cssClass = props.baseClass || "react-simple-keyboard";
   const initRef = React.useRef(null) as React.MutableRefObject<null | boolean>;
   const keyboardRef = React.useRef(
     null
-  ) as React.MutableRefObject<null | Keyboard>;
+  ) as React.MutableRefObject<null | KeyboardReactInterface>;
   const previousProps = React.useRef(props);
 
   React.useEffect(() => {

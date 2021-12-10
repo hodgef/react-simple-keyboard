@@ -1,14 +1,14 @@
 import { KeyboardReactInterface } from "../interfaces";
 export declare const parseProps: (props: KeyboardReactInterface["options"]) => {
     theme: string;
-    layout?: import("simple-keyboard/build/interfaces").KeyboardLayoutObject | undefined;
+    layout?: import("../interfaces").KeyboardLayoutObject | undefined;
     layoutName?: string | undefined;
     display?: {
         [button: string]: string;
     } | undefined;
     mergeDisplay?: boolean | undefined;
-    buttonTheme?: import("simple-keyboard/build/interfaces").KeyboardButtonTheme[] | undefined;
-    buttonAttributes?: import("simple-keyboard/build/interfaces").KeyboardButtonAttributes[] | undefined;
+    buttonTheme?: import("../interfaces").KeyboardButtonTheme[] | undefined;
+    buttonAttributes?: import("../interfaces").KeyboardButtonAttributes[] | undefined;
     debug?: boolean | undefined;
     newLineOnEnter?: boolean | undefined;
     tabCharOnTab?: boolean | undefined;
@@ -40,10 +40,10 @@ export declare const parseProps: (props: KeyboardReactInterface["options"]) => {
         [key: string]: string[];
     } | undefined;
     layoutCandidatesPageSize?: number | undefined;
-    onRender?: ((instance?: import("simple-keyboard/build/components/Keyboard").default | undefined) => void) | undefined;
-    onInit?: ((instance?: import("simple-keyboard/build/components/Keyboard").default | undefined) => void) | undefined;
+    onRender?: ((instance?: import("../interfaces").SimpleKeyboard | undefined) => void) | undefined;
+    onInit?: ((instance?: import("../interfaces").SimpleKeyboard | undefined) => void) | undefined;
     onChange?: ((input: string, e?: MouseEvent | undefined) => any) | undefined;
-    onChangeAll?: ((inputObj: import("simple-keyboard/build/interfaces").KeyboardInput, e?: MouseEvent | undefined) => any) | undefined;
+    onChangeAll?: ((inputObj: import("../interfaces").KeyboardInput, e?: MouseEvent | undefined) => any) | undefined;
     keyboardRef?: ((r: any) => void) | undefined;
 };
 export declare const changedProps: (prevProps: KeyboardReactInterface["options"], props: KeyboardReactInterface["options"]) => string[];
