@@ -47,7 +47,7 @@
     "@babel/plugin-transform-typescript": "^7.15.0",
     "@babel/preset-env": "^7.16.4",
     "@babel/preset-react": "^7.16.5",
-    "@babel/preset-typescript": "^7.16.0",
+    "@babel/preset-typescript": "^7.16.7",
     "@types/enzyme": "^3.10.10",
     "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/jest": "^27.0.3",
