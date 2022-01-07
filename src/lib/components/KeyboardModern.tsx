@@ -7,7 +7,8 @@ import Keyboard from "simple-keyboard/build/index.modern";
 
 const KeyboardReact = (props: KeyboardReactInterface["options"]) => {
   const cssClass = props.baseClass || "react-simple-keyboard";
-  const initRef = React.useRef(null) as React.MutableRefObject<null | boolean>;
+  const initRef = React.useRef<null | boolean>(null);
+  const targetElemRef = React.useRef<null | HTMLDivElement>(null);
   const keyboardRef = React.useRef(
     null
   ) as React.MutableRefObject<null | KeyboardReactInterface>;
@@ -22,7 +23,9 @@ const KeyboardReact = (props: KeyboardReactInterface["options"]) => {
     if (!initRef.current) {
       initRef.current = true;
       parsedProps.debug && console.log("ReactSimpleKeyboard: Init");
-      keyboardRef.current = new Keyboard(`.${cssClass}`, parsedProps);
+      const targetElem = targetElemRef.current as HTMLDivElement;
+      const targetClass = `.${cssClass}`;
+      keyboardRef.current = new Keyboard(targetElem || targetClass, parsedProps);
       parsedProps.keyboardRef && parsedProps.keyboardRef(keyboardRef.current);
     }
 
@@ -43,7 +46,7 @@ const KeyboardReact = (props: KeyboardReactInterface["options"]) => {
     }
   }, [initRef, cssClass, previousProps, props]);
 
-  return <div className={cssClass} />;
+  return <div className={cssClass} ref={targetElemRef} />;
 };
 
 export default KeyboardReact;
