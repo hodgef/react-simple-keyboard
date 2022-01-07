@@ -24,7 +24,10 @@ const KeyboardReact = (props: KeyboardReactInterface["options"]) => {
       parsedProps.debug && console.log("ReactSimpleKeyboard: Init");
       const targetElem = targetElemRef.current as HTMLDivElement;
       const targetClass = `.${cssClass}`;
-      keyboardRef.current = new Keyboard(targetElem || targetClass, parsedProps);
+      keyboardRef.current = new Keyboard(
+        targetElem || targetClass,
+        parsedProps
+      );
       parsedProps.keyboardRef && parsedProps.keyboardRef(keyboardRef.current);
     }
 
