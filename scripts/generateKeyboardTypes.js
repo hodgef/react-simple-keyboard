@@ -11,7 +11,9 @@ dts.bundle({
 let keyboardInterface = fs.readFileSync('src/lib/interfaces.d.ts', 'utf8');
 keyboardInterface = keyboardInterface.replace(/export default (.*);/g, "");
 keyboardInterface = keyboardInterface.replace(/import (.*);/g, "");
-keyboardInterface = keyboardInterface.replace(/class (.*) {/g, "export class $1 {");
+keyboardInterface = keyboardInterface.replace(/class (.*) {/g, "export interface $1 {");
+keyboardInterface = keyboardInterface.replace(/static (.*);/g, "");
+keyboardInterface = keyboardInterface.replace(/constructor\((.*)\);/g, "constructor: ($1) => any");
 keyboardInterface = keyboardInterface.replace(/\n\s*\n/g, '\n');
 keyboardInterface = `
 export interface KeyboardReactInterface extends SimpleKeyboard {

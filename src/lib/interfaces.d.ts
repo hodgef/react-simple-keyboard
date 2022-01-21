@@ -12,7 +12,7 @@ export interface KeyboardReactInterface extends SimpleKeyboard {
  * - Renders the rows and buttons
  * - Handles button functionality
  */
-export class SimpleKeyboard {
+export interface SimpleKeyboard {
   input: KeyboardInput;
   options: KeyboardOptions;
   utilities: any;
@@ -45,10 +45,10 @@ export class SimpleKeyboard {
    * Creates an instance of SimpleKeyboard
    * @param {Array} params If first parameter is a string, it is considered the container class. The second parameter is then considered the options object. If first parameter is an object, it is considered the options object.
    */
-  constructor(
+  constructor: (
     selectorOrOptions?: string | HTMLDivElement | KeyboardOptions,
     keyboardOptions?: KeyboardOptions
-  );
+  ) => any;
   /**
    * parseParams
    */
@@ -305,13 +305,13 @@ export class SimpleKeyboard {
 /**
  * Physical Keyboard Service
  */
-export class PhysicalKeyboard {
+export interface PhysicalKeyboard {
   getOptions: () => KeyboardOptions;
   dispatch: any;
   /**
    * Creates an instance of the PhysicalKeyboard service
    */
-  constructor({ dispatch, getOptions }: PhysicalKeyboardParams);
+  constructor: ({ dispatch, getOptions }: PhysicalKeyboardParams) => any;
   handleHighlightKeyDown(event: KeyboardEvent): void;
   handleHighlightKeyUp(event: KeyboardEvent): void;
   /**
@@ -537,12 +537,12 @@ export interface KeyboardOptions {
    */
   [name: string]: any;
 }
-export class CandidateBox {
+export interface CandidateBox {
   utilities: Utilities;
   candidateBoxElement: HTMLDivElement;
   pageIndex: number;
   pageSize: number;
-  constructor({ utilities }: CandidateBoxParams);
+  constructor: ({ utilities }: CandidateBoxParams) => any;
   destroy(): void;
   show({
     candidateValue,
@@ -560,7 +560,7 @@ export class CandidateBox {
 /**
  * Utility Service
  */
-export class Utilities {
+export interface Utilities {
   getOptions: () => KeyboardOptions;
   getCaretPosition: () => number | null;
   getCaretPositionEnd: () => number | null;
@@ -569,12 +569,12 @@ export class Utilities {
   /**
    * Creates an instance of the Utility service
    */
-  constructor({
+  constructor: ({
     getOptions,
     getCaretPosition,
     getCaretPositionEnd,
     dispatch,
-  }: UtilitiesParams);
+  }: UtilitiesParams) => any;
   /**
    * Retrieve button type
    *
@@ -765,7 +765,6 @@ export class Utilities {
   /**
    * Bind all methods in a given class
    */
-  static bindMethods(myClass: any, instance: any): void;
   /**
    * Transforms an arbitrary string to camelCase
    *
@@ -779,5 +778,4 @@ export class Utilities {
   /**
    * Reusable empty function
    */
-  static noop: () => void;
 }

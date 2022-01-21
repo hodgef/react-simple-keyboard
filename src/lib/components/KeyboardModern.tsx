@@ -9,13 +9,11 @@ const KeyboardReact = (props: KeyboardReactInterface["options"]) => {
   const cssClass = props.baseClass || "react-simple-keyboard";
   const initRef = React.useRef<null | boolean>(null);
   const targetElemRef = React.useRef<null | HTMLDivElement>(null);
-  const keyboardRef = React.useRef(
-    null
-  ) as React.MutableRefObject<null | KeyboardReactInterface>;
+  const keyboardRef = React.useRef<null | KeyboardReactInterface>(null);
   const previousProps = React.useRef(props);
 
   React.useEffect(() => {
-    const parsedProps = parseProps(props);
+    const parsedProps = parseProps(props) as any;
 
     /**
      * Initialize simple-keyboard
@@ -25,7 +23,10 @@ const KeyboardReact = (props: KeyboardReactInterface["options"]) => {
       parsedProps.debug && console.log("ReactSimpleKeyboard: Init");
       const targetElem = targetElemRef.current as HTMLDivElement;
       const targetClass = `.${cssClass}`;
-      keyboardRef.current = new Keyboard(targetElem || targetClass, parsedProps);
+      keyboardRef.current = new Keyboard(
+        targetElem || targetClass,
+        parsedProps
+      ) as KeyboardReactInterface;
       parsedProps.keyboardRef && parsedProps.keyboardRef(keyboardRef.current);
     }
 
