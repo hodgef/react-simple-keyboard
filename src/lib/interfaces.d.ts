@@ -98,6 +98,14 @@ export interface SimpleKeyboard {
    */
   handleButtonClicked(button: string, e?: KeyboardHandlerEvent): void;
   /**
+   * Get mouse hold state
+   */
+  getMouseHold(): boolean;
+  /**
+   * Mark mouse hold state as set
+   */
+  setMouseHold(value: boolean): void;
+  /**
    * Handles button mousedown
    */
   handleButtonMouseDown(button: string, e: KeyboardHandlerEvent): void;
