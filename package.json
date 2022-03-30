@@ -1,6 +1,6 @@
 {
   "name": "react-simple-keyboard",
-  "version": "3.4.93",
+  "version": "3.4.94",
   "description": "React.js Virtual Keyboard",
   "main": "build/index.js",
   "scripts": {
@@ -76,8 +76,8 @@
     "postcss-loader": "^6.2.0",
     "prettier": "^2.6.1",
     "prettier-webpack-plugin": "^1.2.0",
-    "react": "^16.14.0 || ^17.0.0",
-    "react-dom": "^16.14.0 || ^17.0.0",
+    "react": "^16.14.0 || ^17.0.0 || ^18.0.0",
+    "react-dom": "^16.14.0 || ^17.0.0 || ^18.0.0",
     "simple-keyboard": "3.4.73",
     "style-loader": "^3.2.1",
     "terser-webpack-plugin": "^5.3.1",
@@ -88,8 +88,8 @@
     "webpack-dev-server": "4.7.4"
   },
   "peerDependencies": {
-    "react": "^16.14.0 || ^17.0.0",
-    "react-dom": "^16.14.0 || ^17.0.0"
+    "react": "^16.14.0 || ^17.0.0 || ^18.0.0",
+    "react-dom": "^16.14.0 || ^17.0.0 || ^18.0.0"
   },
   "jest": {
     "roots": [
