@@ -40,6 +40,7 @@ export declare const parseProps: (props: KeyboardReactInterface["options"]) => {
         [key: string]: string[];
     } | undefined;
     layoutCandidatesPageSize?: number | undefined;
+    layoutCandidatesCaseSensitiveMatch?: boolean | undefined;
     onRender?: ((instance?: import("../interfaces").SimpleKeyboard | undefined) => void) | undefined;
     onInit?: ((instance?: import("../interfaces").SimpleKeyboard | undefined) => void) | undefined;
     onChange?: ((input: string, e?: MouseEvent | undefined) => any) | undefined;
