@@ -51,7 +51,7 @@
     "@types/enzyme": "^3.10.11",
     "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/jest": "^27.4.1",
-    "@types/react": "^17.0.43",
+    "@types/react": "^18.0.1",
     "@types/react-dom": "^18.0.0",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.32.0",
