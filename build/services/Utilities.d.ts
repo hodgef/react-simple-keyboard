@@ -18,6 +18,7 @@ export declare const parseProps: (props: KeyboardReactInterface["options"]) => {
     physicalKeyboardHighlight?: boolean | undefined;
     physicalKeyboardHighlightPress?: boolean | undefined;
     physicalKeyboardHighlightPressUseClick?: boolean | undefined;
+    physicalKeyboardHighlightPressUsePointerEvents?: boolean | undefined;
     physicalKeyboardHighlightTextColor?: string | undefined;
     physicalKeyboardHighlightBgColor?: string | undefined;
     preventMouseDownDefault?: boolean | undefined;
