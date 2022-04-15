@@ -61,7 +61,7 @@
     "babel-loader": "^8.2.4",
     "babel-preset-minify": "^0.5.0",
     "copy-webpack-plugin": "^10.2.4",
-    "core-js": "^3.21.1",
+    "core-js": "^3.22.0",
     "css-loader": "^6.7.1",
     "dts-bundle": "^0.7.3",
     "enzyme": "^3.11.0",
