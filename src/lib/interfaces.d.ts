@@ -53,8 +53,8 @@ export interface SimpleKeyboard {
    * parseParams
    */
   handleParams: (
-    selectorOrOptions?: string | HTMLDivElement | KeyboardOptions | undefined,
-    keyboardOptions?: KeyboardOptions | undefined
+    selectorOrOptions?: string | HTMLDivElement | KeyboardOptions,
+    keyboardOptions?: KeyboardOptions
   ) => {
     keyboardDOMClass: string;
     keyboardDOM: KeyboardElement;
