@@ -1,5 +1,5 @@
 <a href="https://simple-keyboard.com/demo">
-    <img alt="simple-keyboard: Javscript Virtual Keyboard" src="https://user-images.githubusercontent.com/25509135/187998541-700e349b-7b7a-4f17-811f-2c8b1e8202e8.gif">
+    <img alt="simple-keyboard: Javscript Virtual Keyboard" src="https://user-images.githubusercontent.com/25509135/188000091-fc64ce47-2a87-4835-ab6c-defbaba3ee90.gif">
 </a>
 
 <blockquote>Virtual Keyboard for React. Customizable, responsive and lightweight.</blockquote>
