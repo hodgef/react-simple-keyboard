@@ -331,6 +331,7 @@ export interface KeyboardInput {
 }
 export type CandidateBoxParams = {
         utilities: Utilities;
+        options: KeyboardOptions;
 };
 export type CandidateBoxShowParams = {
         candidateValue: string;
@@ -515,6 +516,10 @@ export interface KeyboardOptions {
             */
         layoutCandidatesCaseSensitiveMatch?: boolean;
         /**
+            * Disables the automatic normalization for selected layout candidates
+            */
+        disableCandidateNormalization?: boolean;
+        /**
             * Executes the callback function every time simple-keyboard is rendered (e.g: when you change layouts).
             */
         onRender?: (instance?: SimpleKeyboard) => void;
@@ -537,10 +542,11 @@ export interface KeyboardOptions {
 }
 export interface CandidateBox {
     utilities: Utilities;
+    options: KeyboardOptions;
     candidateBoxElement: HTMLDivElement;
     pageIndex: number;
     pageSize: number;
-    constructor: ({ utilities }: CandidateBoxParams) => any
+    constructor: ({ utilities, options }: CandidateBoxParams) => any
     destroy(): void;
     show({ candidateValue, targetElement, onSelect, }: CandidateBoxShowParams): void;
     renderPage({ candidateListPages, targetElement, pageIndex, nbPages, onItemSelected, }: CandidateBoxRenderParams): void;
@@ -733,6 +739,10 @@ export interface Utilities {
             * Escape regex input
             */
         escapeRegex(str: string): string;
+        /**
+            * Calculate caret position offset when using rtl option
+            */
+        getRtlOffset(index: number, input: string): number;
         /**
             * Reusable empty function
             */

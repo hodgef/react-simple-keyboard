@@ -10,6 +10,7 @@ dts.bundle({
 
 let keyboardInterface = fs.readFileSync('src/lib/interfaces.d.ts', 'utf8');
 keyboardInterface = keyboardInterface.replace(/export default (.*);/g, "");
+keyboardInterface = keyboardInterface.replace(/export {(.*)};/g, "");
 keyboardInterface = keyboardInterface.replace(/import (.*);/g, "");
 keyboardInterface = keyboardInterface.replace(/class (.*) {/g, "export interface $1 {");
 keyboardInterface = keyboardInterface.replace(/static (.*);/g, "");
