@@ -302,17 +302,18 @@ export interface PhysicalKeyboard {
             * Creates an instance of the PhysicalKeyboard service
             */
         constructor: ({ dispatch, getOptions }: PhysicalKeyboardParams) => any
-        handleHighlightKeyDown(event: KeyboardEvent): void;
-        handleHighlightKeyUp(event: KeyboardEvent): void;
+        handleHighlightKeyDown(e: KeyboardEvent): void;
+        handleHighlightKeyUp(e: KeyboardEvent): void;
         /**
             * Transforms a KeyboardEvent's "key.code" string into a simple-keyboard layout format
-            * @param  {object} event The KeyboardEvent
+            * @param  {object} e The KeyboardEvent
             */
-        getSimpleKeyboardLayoutKey(event: KeyboardEvent): string;
+        getSimpleKeyboardLayoutKey(e: KeyboardEvent): string;
         /**
             * Retrieve key from keyCode
             */
-        keyCodeToKey(keyCode: number): string | undefined;
+        keyCodeToKey(keyCode: number): string;
+        isMofifierKey: (e: KeyboardEvent) => boolean;
 }
 export interface KeyboardLayoutObject {
         [key: string]: string[];
