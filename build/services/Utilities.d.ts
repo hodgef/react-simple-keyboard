@@ -48,6 +48,8 @@ export declare const parseProps: (props: KeyboardReactInterface["options"]) => {
     onInit?: ((instance?: import("../interfaces").SimpleKeyboard | undefined) => void) | undefined;
     onChange?: ((input: string, e?: MouseEvent | undefined) => any) | undefined;
     onChangeAll?: ((inputObj: import("../interfaces").KeyboardInput, e?: MouseEvent | undefined) => any) | undefined;
+    onKeyPress?: ((button: string, e?: MouseEvent | undefined) => any) | undefined;
+    onKeyReleased?: ((button: string, e?: MouseEvent | undefined) => any) | undefined;
     keyboardRef?: ((r: any) => void) | undefined;
 };
 export declare const changedProps: (prevProps: KeyboardReactInterface["options"], props: KeyboardReactInterface["options"]) => string[];
