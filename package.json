@@ -71,7 +71,7 @@
     "jest": "^26.6.3",
     "mini-css-extract-plugin": "^2.7.5",
     "postcss": "^8.4.21",
-    "postcss-loader": "^7.2.3",
+    "postcss-loader": "^7.2.4",
     "react": "^16.0.0 || ^17.0.0 || ^18.0.0",
     "react-dom": "^16.0.0 || ^17.0.0 || ^18.0.0",
     "simple-keyboard": "3.5.43",
