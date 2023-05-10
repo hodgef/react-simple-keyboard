@@ -1,6 +1,6 @@
 /*!
  * 
- *   react-simple-keyboard v3.5.72 (index.modern.js - Modern Browsers bundle)
+ *   react-simple-keyboard v3.5.73 (index.modern.js - Modern Browsers bundle)
  *   https://github.com/hodgef/react-simple-keyboard
  *
  *   NOTE: This modern browsers bundle (index.modern.js) removes all polyfills
@@ -16,7 +16,7 @@
 !function(t,e){"object"==typeof exports&&"object"==typeof module?module.exports=e(require("react")):"function"==typeof define&&define.amd?define(["react"],e):"object"==typeof exports?exports.ReactSimpleKeyboard=e(require("react")):t.ReactSimpleKeyboard=e(t.React)}(this,(function(t){return function(){var e={689:function(t){
 /*!
  * 
- *   simple-keyboard v3.5.58 (index.modern.js - Modern Browsers bundle)
+ *   simple-keyboard v3.5.59 (index.modern.js - Modern Browsers bundle)
  *   https://github.com/hodgef/simple-keyboard
  *
  *   NOTE: This modern browsers bundle (index.modern.js) removes all polyfills
