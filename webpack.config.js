@@ -35,6 +35,8 @@ module.exports = {
     libraryTarget: 'umd',
     clean: true,
     globalObject: 'this',
+    hashFunction: 'xxhash64',
+    chunkFormat: 'module',
     environment: {
       arrowFunction: false
     }
@@ -42,7 +44,14 @@ module.exports = {
   optimization: {
     minimize: true,
     minimizer: [
-      new TerserPlugin({ extractComments: false }),
+      new TerserPlugin({
+        terserOptions: {
+          format: {
+            comments: /react-simple-keyboard/i,
+          },
+        },
+        extractComments: false
+      }),
       new CssMinimizerPlugin()
     ],
   },

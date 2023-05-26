@@ -38,12 +38,21 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
     library: "ReactSimpleKeyboard",
     libraryTarget: 'umd',
-    globalObject: 'this'
+    globalObject: 'this',
+    hashFunction: 'xxhash64',
+    chunkFormat: 'module',
   },
   optimization: {
     minimize: true,
     minimizer: [
-      new TerserPlugin({ extractComments: false }),
+      new TerserPlugin({
+        terserOptions: {
+          format: {
+            comments: /react-simple-keyboard/i,
+          },
+        },
+        extractComments: false
+      }),
     ],
   },
   externals: {
