@@ -13,6 +13,20 @@ const KeyboardReact = (props: KeyboardReactInterface["options"]) => {
   const previousProps = React.useRef(props);
 
   React.useEffect(() => {
+    /**
+     * Whenever this component is unmounted, ensure that Keyboard object that
+     * it created is destroyed so that it removes any event handlers that it
+     * may have installed.
+     */
+    return () => {
+      if (keyboardRef.current) {
+        keyboardRef.current.destroy();
+      }
+      initRef.current = false;
+    };
+  }, []);
+
+  React.useEffect(() => {
     const parsedProps = parseProps(props) as any;
 
     /**
