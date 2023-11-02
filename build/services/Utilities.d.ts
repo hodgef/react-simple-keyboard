@@ -45,8 +45,8 @@ export declare const parseProps: (props: KeyboardReactInterface["options"]) => {
     layoutCandidatesCaseSensitiveMatch?: boolean | undefined;
     disableCandidateNormalization?: boolean | undefined;
     enableLayoutCandidatesKeyPress?: boolean | undefined;
-    onRender?: ((instance?: import("../interfaces").SimpleKeyboard | undefined) => void) | undefined;
-    onInit?: ((instance?: import("../interfaces").SimpleKeyboard | undefined) => void) | undefined;
+    onRender?: ((instance: import("../interfaces").SimpleKeyboard) => void) | undefined;
+    onInit?: ((instance: import("../interfaces").SimpleKeyboard) => void) | undefined;
     onChange?: ((input: string, e?: MouseEvent | undefined) => any) | undefined;
     onChangeAll?: ((inputObj: import("../interfaces").KeyboardInput, e?: MouseEvent | undefined) => any) | undefined;
     onKeyPress?: ((button: string, e?: MouseEvent | undefined) => any) | undefined;
