@@ -46,7 +46,7 @@
     "@babel/core": "^7.23.9",
     "@babel/plugin-proposal-class-properties": "^7.16.7",
     "@babel/plugin-transform-typescript": "^7.23.6",
-    "@babel/preset-env": "^7.23.8",
+    "@babel/preset-env": "^7.23.9",
     "@babel/preset-react": "^7.22.3",
     "@babel/preset-typescript": "^7.23.3",
     "@types/enzyme": "^3.10.12",
