@@ -4,7 +4,6 @@ import { parseProps, changedProps } from "../services/Utilities";
 import "simple-keyboard/build/css/index.css";
 import { KeyboardReactInterface } from "../interfaces.d";
 
-// Test
 const KeyboardReact = (props: KeyboardReactInterface["options"]) => {
   const cssClass = props.baseClass || "react-simple-keyboard";
   const initRef = React.useRef<null | boolean>(null);
