@@ -555,7 +555,7 @@ export interface PhysicalKeyboard {
             * Retrieve key from keyCode
             */
         keyCodeToKey(keyCode: number): string;
-        isMofifierKey: (e: KeyboardEvent) => boolean;
+        isModifierKey: (e: KeyboardEvent) => boolean;
 }
 /**
     * Utility Service
