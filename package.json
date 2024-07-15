@@ -11,7 +11,6 @@
     "test": "jest --silent",
     "coverage": "npm run test -- --coverage",
     "prepare": "npm run build",
-    "trypublish": "npm publish || true",
     "generate-types": "node scripts/generateKeyboardTypes.js"
   },
   "repository": {
