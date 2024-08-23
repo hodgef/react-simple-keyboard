@@ -74,7 +74,7 @@
     "postcss-loader": "^8.1.1",
     "react": "^16.0.0 || ^17.0.0 || ^18.0.0",
     "react-dom": "^16.0.0 || ^17.0.0 || ^18.0.0",
-    "simple-keyboard": "3.7.103",
+    "simple-keyboard": "3.7.104",
     "style-loader": "^4.0.0",
     "terser-webpack-plugin": "^5.3.10",
     "typescript": "^4.9.5",
