@@ -46,6 +46,7 @@ export declare const parseProps: (props: KeyboardReactInterface["options"]) => {
     disableCandidateNormalization?: boolean | undefined;
     enableLayoutCandidatesKeyPress?: boolean | undefined;
     updateCaretOnSelectionChange?: boolean | undefined;
+    clickOnMouseDown?: boolean | undefined;
     onRender?: ((instance: import("../interfaces").SimpleKeyboard) => void) | undefined;
     onInit?: ((instance: import("../interfaces").SimpleKeyboard) => void) | undefined;
     onChange?: ((input: string, e?: MouseEvent | undefined) => any) | undefined;
