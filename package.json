@@ -52,7 +52,7 @@
     "@types/jest": "^29.5.14",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.3",
-    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/eslint-plugin": "^8.22.0",
     "@typescript-eslint/parser": "^4.32.0",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.8.0",
     "autoprefixer": "^10.4.20",
