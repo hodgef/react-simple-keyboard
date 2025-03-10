@@ -1,6 +1,6 @@
 /*!
  * 
- *   react-simple-keyboard v3.8.53 (index.modern.esm.js - Modern Browsers bundle, ESM output)
+ *   react-simple-keyboard v3.8.54 (index.modern.esm.js - Modern Browsers bundle, ESM output)
  *   https://github.com/hodgef/react-simple-keyboard
  *
  *   NOTE: This modern browsers bundle (index.modern.esm.js) removes all polyfills
