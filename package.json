@@ -51,7 +51,7 @@
     "@types/enzyme": "^3.10.12",
     "@types/jest": "^29.5.14",
     "@types/react": "^18.0.9",
-    "@types/react-dom": "^18.0.3",
+    "@types/react-dom": "^19.0.4",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.32.0",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.8.0",
@@ -74,7 +74,7 @@
     "postcss": "^8.5.3",
     "postcss-loader": "^8.1.1",
     "react": "^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
-    "react-dom": "^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
+    "react-dom": "^19.1.0",
     "simple-keyboard": "3.8.44",
     "style-loader": "^4.0.0",
     "terser-webpack-plugin": "^5.3.14",
@@ -86,7 +86,7 @@
   },
   "peerDependencies": {
     "react": "^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
-    "react-dom": "^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0"
+    "react-dom": "^19.1.0"
   },
   "jest": {
     "testEnvironment": "jsdom",
