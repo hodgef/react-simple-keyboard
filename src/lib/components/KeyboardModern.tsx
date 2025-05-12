@@ -5,7 +5,7 @@ import "simple-keyboard/build/css/index.css";
 import { KeyboardReactInterface } from "../interfaces";
 import Keyboard from "simple-keyboard/build/index.modern";
 
-const KeyboardReact = (props: KeyboardReactInterface["options"]) => {
+const KeyboardReact = (props: KeyboardReactInterface["options"]) : any => {
   const cssClass = props.baseClass || "react-simple-keyboard";
   const initRef = React.useRef<null | boolean>(null);
   const targetElemRef = React.useRef<null | HTMLDivElement>(null);
