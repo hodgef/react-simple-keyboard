@@ -70,7 +70,7 @@
     "html-webpack-plugin": "^5.6.5",
     "jest": "^30.0.0",
     "jest-environment-jsdom": "^30.2.0",
-    "mini-css-extract-plugin": "^2.9.4",
+    "mini-css-extract-plugin": "^2.10.0",
     "postcss": "^8.5.6",
     "postcss-loader": "^8.2.0",
     "react": "^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
