@@ -67,7 +67,7 @@
     "enzyme": "^3.11.0",
     "eslint": "^7.32.0",
     "file-loader": "^6.2.0",
-    "html-webpack-plugin": "^5.6.5",
+    "html-webpack-plugin": "^5.6.6",
     "jest": "^30.0.0",
     "jest-environment-jsdom": "^30.2.0",
     "mini-css-extract-plugin": "^2.9.4",
