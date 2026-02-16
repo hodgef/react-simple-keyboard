@@ -72,7 +72,7 @@
     "jest-environment-jsdom": "^30.2.0",
     "mini-css-extract-plugin": "^2.10.0",
     "postcss": "^8.5.6",
-    "postcss-loader": "^8.2.0",
+    "postcss-loader": "^8.2.1",
     "react": "^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
     "react-dom": "^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
     "simple-keyboard": "^3.8.108",
