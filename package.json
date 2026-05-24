@@ -3,6 +3,28 @@
   "version": "3.8.213",
   "description": "React.js Virtual Keyboard",
   "main": "build/index.js",
+  "module": "build/index.modern.esm.js",
+  "types": "build/index.d.ts",
+  "sideEffects": [
+    "**/*.css",
+    "./build/index.js",
+    "./src/lib/polyfills.js"
+  ],
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./build/index.modern.d.ts",
+        "default": "./build/index.modern.esm.js"
+      },
+      "require": {
+        "types": "./build/index.d.ts",
+        "default": "./build/index.js"
+      },
+      "default": "./build/index.js"
+    },
+    "./build/*": "./build/*",
+    "./package.json": "./package.json"
+  },
   "scripts": {
     "start": "webpack serve --config webpack.config.demo.js",
     "build": "npm run generate-types && webpack && npm run build-modern && npm run build-modern-esm && tsc",
