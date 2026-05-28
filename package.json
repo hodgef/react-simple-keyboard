@@ -103,7 +103,7 @@
     "typescript": "^4.9.5",
     "url-loader": "^4.1.1",
     "webpack": "^5.107.2",
-    "webpack-cli": "^6.0.1",
+    "webpack-cli": "^7.0.3",
     "webpack-dev-server": "4.13.3"
   },
   "peerDependencies": {
