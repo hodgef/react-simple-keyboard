@@ -2,7 +2,7 @@
 import * as React from "react";
 import { parseProps, changedProps } from "../services/Utilities";
 import "simple-keyboard/build/css/index.css";
-import { KeyboardReactInterface } from "../interfaces";
+import { KeyboardReactInterface } from "../interfaces.d";
 import Keyboard from "simple-keyboard/build/index.modern";
 
 const KeyboardReact = (props: KeyboardReactInterface["options"]) : any => {
