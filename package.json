@@ -8,7 +8,9 @@
   "sideEffects": [
     "**/*.css",
     "./build/index.js",
-    "./src/lib/polyfills.js"
+    "./src/lib/polyfills.js",
+    "./src/lib/components/Keyboard.tsx",
+    "./src/lib/components/KeyboardModern.tsx"
   ],
   "exports": {
     ".": {
