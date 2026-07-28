@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import * as React from "react";
 import { parseProps, changedProps } from "../services/Utilities";
-import "simple-keyboard/build/css/index.css";
 import { KeyboardReactInterface } from "../interfaces";
 import Keyboard from "simple-keyboard/build/index.modern";
 

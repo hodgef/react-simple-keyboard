@@ -5,7 +5,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: "development",
   devtool: 'cheap-module-source-map',
-  entry: './src/demo/index.tsx',
+  entry: [
+    'simple-keyboard/build/css/index.css',
+    './src/demo/index.tsx'
+  ],
   output: {
     path: path.resolve(__dirname, 'demo'),
     filename: 'index.js'

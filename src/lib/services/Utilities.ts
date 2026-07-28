@@ -18,6 +18,8 @@ export const changedProps = (
   const cleanedPrevProps = cleanProps(prevProps);
 
   return Object.keys(cleanedProps).filter(
-    (propName) => cleanedProps[propName] !== cleanedPrevProps[propName]
+    (propName) =>
+      (cleanedProps as Record<string, unknown>)[propName] !==
+      (cleanedPrevProps as Record<string, unknown>)[propName]
   );
 };
