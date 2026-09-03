@@ -73,7 +73,7 @@
       )
     )
       throw new Error("MAX_LENGTH_ISSUE");
-    else
+    else if(process.env.NODE_ENV === "development")
       console.log("MAX_LENGTH PASSED:", keyboard.options.layoutName, keyboard.getInput().length, keyboard.options.maxLength);
 
     /**
@@ -82,7 +82,7 @@
      */
     if(stdBtnCount !== fullInput.length)
       throw new Error("STANDARD_BUTTONS_ISSUE");
-    else
+    else if(process.env.NODE_ENV === "development")
       console.log("STANDARD_BUTTONS PASSED:", keyboard.options.layoutName, stdBtnCount, fullInput.length);
   }
 
